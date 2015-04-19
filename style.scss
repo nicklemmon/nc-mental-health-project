@@ -1,0 +1,93 @@
+
+/*** BEGIN SASS STUFF ***/
+
+	/* SASS VARIABLES */
+        
+        /* color variables */
+
+        $outrageousOrange:  #FF6138;
+        $paleCanary:        #FFFF9D;
+        $caper:             #BEEB9F;
+        $deYork:            #79BD8F;
+        $persianGreen:      #00A388;
+        $darkGray:          #3D3D3D;		
+
+
+		/* other variables */
+		
+
+	/* SASS MIX-INS */
+
+
+/***=== BEGIN OTHER STYLING STUFF ===***/
+
+
+/*== GLOBAL STYLES ==*/
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color: $darkGray;
+}
+
+.container-full { /* sets a new container which spans the entire body */
+    margin: 0 auto;
+    margin-top: -20px; /* fixes alignment with navbar */
+    width: 100%;
+}
+
+.row {
+    padding: 60px 40px 60px 40px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+/*== HEADER HIERARCHY ==*/
+
+    h1 {
+        font-size: 4em;
+        color: $outrageousOrange;
+    }
+
+    h2 {
+        font-size: 3em;
+        font-weight: 700;
+    }
+
+    h3 {
+        font-size: 2.5em;
+        font-weight: 300;
+    }
+
+    h4 {
+        font-size: 1.5em;
+        text-transform: uppercase;
+    }
+
+    h5 {
+        color: $deYork;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+/*** BEGIN MEDIA QUERIES ***/
+
+/* Smallest devices (phone, 768px and below) */
+@media (max-width: 768px) {
+		
+}
+
+/* Small devices (tablets, 768px to 992px) */ 
+@media (min-width: 768px) and (max-width: 992px) {
+	
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1200px) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+}

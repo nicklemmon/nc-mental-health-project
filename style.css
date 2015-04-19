@@ -1,0 +1,58 @@
+/*** BEGIN SASS STUFF ***/
+/* SASS VARIABLES */
+/* color variables */
+/* other variables */
+/* SASS MIX-INS */
+/***=== BEGIN OTHER STYLING STUFF ===***/
+/*== GLOBAL STYLES ==*/
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #3d3d3d;
+}
+
+.container-full {
+  /* sets a new container which spans the entire body */
+  margin: 0 auto;
+  margin-top: -20px;
+  /* fixes alignment with navbar */
+  width: 100%;
+}
+
+.row {
+  padding: 60px 40px 60px 40px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/*== HEADER HIERARCHY ==*/
+h1 {
+  font-size: 4em;
+  color: #ff6138;
+}
+
+h2 {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2.5em;
+  font-weight: 300;
+}
+
+h4 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+h5 {
+  color: #79bd8f;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/*** BEGIN MEDIA QUERIES ***/
+/* Smallest devices (phone, 768px and below) */
+/* Small devices (tablets, 768px to 992px) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
