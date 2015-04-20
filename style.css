@@ -24,6 +24,10 @@ body {
   margin-right: 0px;
 }
 
+.exposition.row .col-sm-4 {
+  padding-top: 120px;
+}
+
 /*== HEADER HIERARCHY ==*/
 h1 {
   font-size: 4em;
