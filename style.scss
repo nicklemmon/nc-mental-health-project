@@ -14,8 +14,10 @@
 
 
 		/*= other variables =*/
-		
+		$defaultPadding:  100px;
+        $defaultMargin:   80px;  
         $defaultBoxShadow: 0px 2px 10px 2px rgba(0,0,0,0.05);
+
 
 	/*== SASS MIX-INS ==*/
 
@@ -41,7 +43,7 @@ body {
 }
 
 .row {
-    padding: 60px 40px 60px 40px;
+    padding: $defaultPadding;
     margin-left: 0px;
     margin-right: 0px;
 }
@@ -53,52 +55,48 @@ body {
     }
 
 .jumbotron.row {
-    color: white;
+    color:      white;
     background: $darkGray;
 }
 
 p { /* paragraph styles */
-    font-size: 16px;
+    font-family: 'Alegreya', serif;
+    font-size: 18px;
     color: lighten($darkGray, 20%);
 }
 
-
-.exposition.row {
-    
+.btn {
+    text-transform: uppercase;
 }
-
-    .exposition.row .col-sm-4 {
-        padding-top: 120px;
-    }
 
 
 /*===== HEADER HIERARCHY =====*/
 
-    h1 {
-        font-size: 4em;
-        color: $outrageousOrange;
-    }
+h1 {
+    font-size: 4em;
+    color: $outrageousOrange;
+}
 
-    h2 {
-        font-size: 3em;
-        font-weight: 700;
-    }
+h2 {
+    font-size: 3em;
+    font-weight: 700;
+}
 
-    h3 {
-        font-size: 2.5em;
-        font-weight: 300;
-    }
+h3 {
+    font-size: 2.5em;
+    font-weight: 300;
+}
 
-    h4 {
-        font-size: 1.5em;
-        text-transform: uppercase;
-    }
+h4 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
 
-    h5 {
-        color: $deYork;
-        font-weight: 700;
-        text-transform: uppercase;
-    }
+h5 {
+    color: $deYork;
+    font-weight: 700;
+    text-transform: uppercase;
+}
 
 /*===== NAVBAR STYLES =====*/
 
@@ -118,7 +116,8 @@ p { /* paragraph styles */
 
 	.navbar-default .navbar-nav > li > a { /* styling navbar nav */
 		color: white;
-		padding-left: 40px;
+        text-transform: uppercase;
+		padding-top: 40px;
 	}
 
 		.navbar-default .navbar-nav > li > a:hover { /* styling hover for navbar nav */
@@ -131,6 +130,7 @@ p { /* paragraph styles */
 	background-image: url(logo.svg);
 	background-repeat: no-repeat;
 	display: block;
+    padding-top: 40px;
 	width: 200px;
 	background-position: 50%;
 	background-size: 80%;
@@ -140,6 +140,43 @@ p { /* paragraph styles */
 		color: white;
 	}
 
+/*===== SECTION STYLES =====*/
+
+/*=== JUMBOTRON ROW ===*/
+
+.jumbotron.row .btn {
+    color:              white;
+    background-color:   $outrageousOrange;
+    border-color:       $outrageousOrange;
+}
+
+/*=== EXPOSITION ROW ===*/
+
+.exposition.row {
+    
+}
+
+    .exposition.row .col-sm-4 {
+        padding-top: 120px;
+    }
+
+/*= SVG Icons - svgicons.sparkk.fr =*/
+
+.svg-icon {
+  width: 50%;
+  height: 50%;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: $outrageousOrange;
+}
+
+.svg-icon circle {
+  stroke: #4691f6;
+  stroke-width: 1;
+}
 
 /*===== FOOTER STYLES =====*/
 

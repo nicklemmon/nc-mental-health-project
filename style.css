@@ -19,7 +19,7 @@ body {
 }
 
 .row {
-  padding: 60px 40px 60px 40px;
+  padding: 100px;
   margin-left: 0px;
   margin-right: 0px;
 }
@@ -38,12 +38,13 @@ body {
 
 p {
   /* paragraph styles */
-  font-size: 16px;
+  font-family: 'Alegreya', serif;
+  font-size: 18px;
   color: #707070;
 }
 
-.exposition.row .col-sm-4 {
-  padding-top: 120px;
+.btn {
+  text-transform: uppercase;
 }
 
 /*===== HEADER HIERARCHY =====*/
@@ -93,7 +94,8 @@ h5 {
 .navbar-default .navbar-nav > li > a {
   /* styling navbar nav */
   color: white;
-  padding-left: 40px;
+  text-transform: uppercase;
+  padding-top: 40px;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
@@ -108,6 +110,7 @@ h5 {
   background-image: url(logo.svg);
   background-repeat: no-repeat;
   display: block;
+  padding-top: 40px;
   width: 200px;
   background-position: 50%;
   background-size: 80%;
@@ -116,6 +119,36 @@ h5 {
 .navbar-brand span {
   /* hides text */
   color: white;
+}
+
+/*===== SECTION STYLES =====*/
+/*=== JUMBOTRON ROW ===*/
+.jumbotron.row .btn {
+  color: white;
+  background-color: #ff6138;
+  border-color: #ff6138;
+}
+
+/*=== EXPOSITION ROW ===*/
+.exposition.row .col-sm-4 {
+  padding-top: 120px;
+}
+
+/*= SVG Icons - svgicons.sparkk.fr =*/
+.svg-icon {
+  width: 50%;
+  height: 50%;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #ff6138;
+}
+
+.svg-icon circle {
+  stroke: #4691f6;
+  stroke-width: 1;
 }
 
 /*===== FOOTER STYLES =====*/
