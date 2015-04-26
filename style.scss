@@ -16,13 +16,18 @@
 		/*= other variables =*/
 		$defaultPadding:  100px;
         $defaultMargin:   80px;  
-        $defaultBoxShadow: 0px 2px 10px 2px rgba(0,0,0,0.05);
+        $defaultBoxShadow: 0px 2px 10px 2px rgba(0,0,0,0.1);
 
 
 	/*== SASS MIX-INS ==*/
 
     @mixin hoverAnimation($backgroundColor, $timing) {
         background-color: $backgroundColor;
+        transition: background $timing ease 0s;
+    }
+
+    @mixin shadowHoverAnimation($boxShadow, $timing) {
+        box-shadow: $boxShadow;
         transition: background $timing ease 0s;
     }
 
@@ -43,15 +48,15 @@ body {
 }
 
 .row {
-    padding: $defaultPadding;
-    margin-left: 0px;
-    margin-right: 0px;
+    padding:        $defaultPadding/2 $defaultPadding $defaultPadding $defaultPadding;
+    margin-left:    0px;
+    margin-right:   0px;
 }
 
     .row span { /* centers and limits width of contents to 960px */
-        display: block;
-        margin: 0 auto;
-        max-width: 960px;
+        display:    block;
+        margin:     0 auto;
+        max-width:  960px;
     }
 
 .jumbotron.row {
@@ -59,10 +64,21 @@ body {
     background: $darkGray;
 }
 
+aside {
+    background: $paleCanary;
+}
+
 p { /* paragraph styles */
-    font-family: 'Alegreya', serif;
-    font-size: 18px;
-    color: lighten($darkGray, 20%);
+    font-family:    'Alegreya', serif;
+    font-size:      18px;
+    color:          lighten($darkGray, 20%);
+}
+
+.subtitle {
+    font-size:      1em;
+    font-weight:    300;
+    padding-top:    .5em;
+    border-top:     1px solid;
 }
 
 .btn {
@@ -73,28 +89,27 @@ p { /* paragraph styles */
 /*===== HEADER HIERARCHY =====*/
 
 h1 {
-    font-size: 4em;
-    color: $outrageousOrange;
+    font-size:      3.5em;
+    color:          $outrageousOrange;
 }
 
 h2 {
-    font-size: 3em;
-    font-weight: 700;
+    font-size:      2.75em;
+    font-weight:    300;
 }
 
 h3 {
-    font-size: 2.5em;
-    font-weight: 300;
+    font-size:      2.25em;
 }
 
 h4 {
-    font-size: 1.5em;
+    font-size:      1.25em;
     text-transform: uppercase;
 }
 
 h5 {
-    color: $deYork;
-    font-weight: 700;
+    color:          $deYork;
+    font-weight:    700;
     text-transform: uppercase;
 }
 
@@ -107,7 +122,7 @@ h5 {
 }
 
 .navbar {
-	background: $deYork;
+	background: url(images/concrete_deyork.png);
 	color: white;
     border: none;
 	box-shadow: $defaultBoxShadow;
@@ -122,8 +137,12 @@ h5 {
 
 		.navbar-default .navbar-nav > li > a:hover { /* styling hover for navbar nav */
 			color: white;
-			background: darken($deYork, 20%);
-			@include hoverAnimation((darken($deYork, 20%)), .3s);
+			background: $deYork;
+            box-shadow: 3px 0px 3px 0px rgba(70,138,92,.5);
+            transition: all .4s ease;
+            transition-property: background, box-shadow;
+			//@include hoverAnimation($deYork, .5s);
+            //@include shadowHoverAnimation($defaultBoxShadow, .5s);
 		}
 
 .navbar-brand {
@@ -131,7 +150,7 @@ h5 {
 	background-repeat: no-repeat;
 	display: block;
     padding-top: 40px;
-	width: 200px;
+	width: 280px;
 	background-position: 50%;
 	background-size: 80%;
 }
@@ -144,10 +163,24 @@ h5 {
 
 /*=== JUMBOTRON ROW ===*/
 
-.jumbotron.row .btn {
-    color:              white;
-    background-color:   $outrageousOrange;
-    border-color:       $outrageousOrange;
+.jumbotron.row {
+    padding: $defaultPadding; /* adds extra padding to the top for .jumbotron.row */
+}
+
+    .jumbotron h1 {
+        font-size: 3.5em;
+    }
+
+    .jumbotron.row .btn {
+        color:              white;
+        background-color:   $outrageousOrange;
+        border-color:       $outrageousOrange;
+    }
+
+/*=== ACCESS ROW ===*/
+
+.access.row {
+    margin-top: -30px; /* aligns row appropriately w/ .jumbotron */
 }
 
 /*=== EXPOSITION ROW ===*/
@@ -161,7 +194,6 @@ h5 {
     }
 
 /*= SVG Icons - svgicons.sparkk.fr =*/
-
 
 .svg-container {
     display: block;
@@ -203,9 +235,27 @@ footer {
 
 /* Smallest devices (phone, 768px and below) */
 @media (max-width: 768px) {
-		
-    h1 {
-        font-size: 3em;
+    
+    .navbar-brand {
+        padding-top:    5px;
+        max-width:      200px;
+    }
+    
+    .row,
+    .jumbotron.row {
+        padding:        $defaultPadding/4;
+    }
+    
+    .jumbotron h1 {
+        font-size:      2.5em;
+    }
+    
+    h2 {
+        font-size:      2em;
+    }
+    
+    h3 {
+        font-size:      1.75em;
     }
 }
 
