@@ -6,7 +6,7 @@
 /*========== BEGIN OTHER STYLING STUFF ==========*/
 /*===== GLOBAL STYLES =====*/
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   color: #3d3d3d;
 }
 
@@ -36,26 +36,31 @@ body {
   background: #3d3d3d;
 }
 
-aside {
-  background: #ffff9d;
-}
-
 p {
   /* paragraph styles */
-  font-family: 'Alegreya', serif;
+  font-family: "Alegreya", serif;
   font-size: 18px;
   color: #707070;
+  margin-top: 20px;
 }
 
 .subtitle {
+  margin-top: 10px;
+  /* makes margin different from typical paragraphs */
   font-size: 1em;
   font-weight: 300;
   padding-top: .5em;
   border-top: 1px solid;
+  text-transform: uppercase;
 }
 
 .btn {
   text-transform: uppercase;
+}
+
+.btn.btn-primary {
+  background: #79bd8f;
+  border: 1px solid #79bd8f;
 }
 
 /*===== HEADER HIERARCHY =====*/
@@ -70,7 +75,8 @@ h2 {
 }
 
 h3 {
-  font-size: 2.25em;
+  font-size: 1.75em;
+  margin-top: 20px;
 }
 
 h4 {
@@ -141,6 +147,7 @@ h5 {
 
 .jumbotron h1 {
   font-size: 3.5em;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .jumbotron.row .btn {
@@ -153,6 +160,24 @@ h5 {
 .access.row {
   margin-top: -30px;
   /* aligns row appropriately w/ .jumbotron */
+}
+
+aside {
+  background: #ffff9d;
+  padding: 50px;
+  margin-top: -50px;
+  /* aligns with .jumbotron */
+}
+
+form.county-select > select {
+  margin-top: 20px;
+  font-family: "Alegreya", serif;
+  font-weight: 700;
+  width: 100%;
+}
+
+form.county-select input {
+  margin-top: 20px;
 }
 
 /*=== EXPOSITION ROW ===*/
@@ -195,9 +220,22 @@ footer .secondary {
 /*** BEGIN MEDIA QUERIES ***/
 /* Smallest devices (phone, 768px and below) */
 @media (max-width: 768px) {
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.25em;
+  }
+
   .navbar-brand {
     padding-top: 5px;
     max-width: 200px;
+  }
+
+  aside {
+    margin-top: 40px;
+    /* corrects overlapping issue for smaller screens */
   }
 
   .row,
@@ -206,15 +244,7 @@ footer .secondary {
   }
 
   .jumbotron h1 {
-    font-size: 2.5em;
-  }
-
-  h2 {
     font-size: 2em;
-  }
-
-  h3 {
-    font-size: 1.75em;
   }
 }
 /* Small devices (tablets, 768px to 992px) */

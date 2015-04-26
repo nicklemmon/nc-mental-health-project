@@ -17,6 +17,8 @@
 		$defaultPadding:  100px;
         $defaultMargin:   80px;  
         $defaultBoxShadow: 0px 2px 10px 2px rgba(0,0,0,0.1);
+        $primaryFontStack:      'Nunito', sans-serif;
+        $secondaryFontStack:    'Alegreya', serif;
 
 
 	/*== SASS MIX-INS ==*/
@@ -37,7 +39,7 @@
 /*===== GLOBAL STYLES =====*/
 
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: $primaryFontStack;
     color: $darkGray;
 }
 
@@ -64,26 +66,34 @@ body {
     background: $darkGray;
 }
 
-aside {
-    background: $paleCanary;
-}
+
 
 p { /* paragraph styles */
-    font-family:    'Alegreya', serif;
+    font-family:    $secondaryFontStack;
     font-size:      18px;
     color:          lighten($darkGray, 20%);
+    margin-top:     $defaultMargin/4;
 }
 
 .subtitle {
+    margin-top:     $defaultMargin/8; /* makes margin different from typical paragraphs */
     font-size:      1em;
     font-weight:    300;
     padding-top:    .5em;
     border-top:     1px solid;
+    text-transform: uppercase;
 }
 
 .btn {
     text-transform: uppercase;
 }
+
+    .btn.btn-primary {
+        background: $deYork;
+        border:     1px solid $deYork;
+    }
+
+
 
 
 /*===== HEADER HIERARCHY =====*/
@@ -99,7 +109,8 @@ h2 {
 }
 
 h3 {
-    font-size:      2.25em;
+    font-size:      1.75em;
+    margin-top:     $defaultMargin/4;
 }
 
 h4 {
@@ -168,7 +179,8 @@ h5 {
 }
 
     .jumbotron h1 {
-        font-size: 3.5em;
+        font-size:      3.5em;
+        text-shadow:    4px 4px 4px rgba(0,0,0,.1);
     }
 
     .jumbotron.row .btn {
@@ -182,6 +194,27 @@ h5 {
 .access.row {
     margin-top: -30px; /* aligns row appropriately w/ .jumbotron */
 }
+
+aside {
+    background: $paleCanary;
+    padding:    $defaultPadding/2;
+    margin-top: -50px; /* aligns with .jumbotron */
+}
+
+form.county-select {
+    
+}
+
+    form.county-select > select {
+        margin-top:     $defaultMargin/4;
+        font-family:    $secondaryFontStack;
+        font-weight:    700;
+        width:          100%;
+    }
+
+    form.county-select input {
+        margin-top:     $defaultMargin/4;
+    }
 
 /*=== EXPOSITION ROW ===*/
 
@@ -236,9 +269,21 @@ footer {
 /* Smallest devices (phone, 768px and below) */
 @media (max-width: 768px) {
     
+    h2 {
+        font-size:      2em;
+    }
+    
+    h3 {
+        font-size:      1.25em;
+    }
+    
     .navbar-brand {
         padding-top:    5px;
         max-width:      200px;
+    }
+    
+    aside {
+        margin-top:     $defaultMargin/2; /* corrects overlapping issue for smaller screens */
     }
     
     .row,
@@ -247,16 +292,10 @@ footer {
     }
     
     .jumbotron h1 {
-        font-size:      2.5em;
-    }
-    
-    h2 {
         font-size:      2em;
     }
     
-    h3 {
-        font-size:      1.75em;
-    }
+   
 }
 
 /* Small devices (tablets, 768px to 992px) */ 
