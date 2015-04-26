@@ -135,6 +135,12 @@ h5 {
 }
 
 /*= SVG Icons - svgicons.sparkk.fr =*/
+.svg-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .svg-icon {
   width: 50%;
   height: 50%;

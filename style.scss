@@ -162,20 +162,27 @@ h5 {
 
 /*= SVG Icons - svgicons.sparkk.fr =*/
 
+
+.svg-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .svg-icon {
-  width: 50%;
-  height: 50%;
+    width: 50%;
+    height: 50%;
 }
 
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
-  fill: $outrageousOrange;
+    fill: $outrageousOrange;
 }
 
 .svg-icon circle {
-  stroke: #4691f6;
-  stroke-width: 1;
+    stroke: #4691f6;
+    stroke-width: 1;
 }
 
 /*===== FOOTER STYLES =====*/
