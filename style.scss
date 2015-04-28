@@ -196,17 +196,40 @@ h5 {
 }
 
 aside {
-    background: $paleCanary;
-    padding:    $defaultPadding/2;
-    margin-top: -50px; /* aligns with .jumbotron */
+    padding:        $defaultPadding/4 $defaultPadding/4 $defaultPadding/2 $defaultPadding/4;
+    background:     $deYork;
 }
+
+    aside h2,
+    aside .btn {
+        color:          white;
+        text-shadow:    1px 1px $persianGreen;
+    }
+
+    aside .subtitle {
+        color:  $persianGreen;
+    }
+
+    aside label {
+        font-family:    $secondaryFontStack;
+        color:          white;
+        text-shadow:    1px 1px $persianGreen;
+        margin-top:     $defaultMargin/4;
+    }
+
+    aside select {
+    }
+
+    aside .btn {
+        color:          white;
+        background:     $caper;
+    }
 
 form.county-select {
     
 }
 
     form.county-select > select {
-        margin-top:     $defaultMargin/4;
         font-family:    $secondaryFontStack;
         font-weight:    700;
         width:          100%;
@@ -219,36 +242,37 @@ form.county-select {
 /*=== EXPOSITION ROW ===*/
 
 .exposition.row {
-    
+    background:     url(images/concrete.png);
 }
 
     .exposition.row .col-sm-4 {
-        padding-top: 120px;
+        
     }
 
-/*= SVG Icons - svgicons.sparkk.fr =*/
+        /*= SVG Icons - svgicons.sparkk.fr =*/
 
-.svg-container {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+        .svg-icon {
+            width:      50%;
+            height:     50%;
+        }
 
-.svg-icon {
-    width: 50%;
-    height: 50%;
-}
+        .svg-icon path,
+        .svg-icon polygon,
+        .svg-icon rect {
+            fill:       $outrageousOrange;
 
-.svg-icon path,
-.svg-icon polygon,
-.svg-icon rect {
-    fill: $outrageousOrange;
-}
+        }
 
-.svg-icon circle {
-    stroke: #4691f6;
-    stroke-width: 1;
-}
+        .svg-icon circle {
+            stroke:         #4691f6;
+            stroke-width:   1;
+        }
+
+        .exposition.row .btn {
+            color:          white;
+            background:     $deYork;
+            border-color:   $deYork;
+        }
 
 /*===== FOOTER STYLES =====*/
 
@@ -269,12 +293,16 @@ footer {
 /* Smallest devices (phone, 768px and below) */
 @media (max-width: 768px) {
     
+    .jumbotron h1 {
+        font-size:      2.5em;
+    }
+    
     h2 {
         font-size:      2em;
     }
     
     h3 {
-        font-size:      1.25em;
+        font-size:      1.5em;
     }
     
     .navbar-brand {
@@ -282,33 +310,36 @@ footer {
         max-width:      200px;
     }
     
-    aside {
-        margin-top:     $defaultMargin/2; /* corrects overlapping issue for smaller screens */
-    }
-    
     .row,
     .jumbotron.row {
-        padding:        $defaultPadding/4;
-    }
+        padding:        $defaultPadding/2 $defaultPadding/4 $defaultPadding/2 $defaultPadding/4;
+    }    
     
-    .jumbotron h1 {
-        font-size:      2em;
+    .exposition.row .col-sm-4 {
+        text-align: center;
     }
-    
    
 }
 
 /* Small devices (tablets, 768px to 992px) */ 
 @media (min-width: 768px) and (max-width: 992px) {
-	
+
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1200px) {
-
+    
+    aside {
+        margin-top: -$defaultMargin;
+    }
+    
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
+    
+    aside {
+        margin-top: -$defaultMargin*2;
+    }
 
 }
