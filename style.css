@@ -272,6 +272,16 @@ form.county-select input {
   border-color: #79bd8f;
 }
 
+/*=== BIO STYLES ===*/
+.bio.row {
+  color: white;
+  background: #3d3d3d;
+}
+
+.bio.row p {
+  color: #cccccc;
+}
+
 /*===== FOOTER STYLES =====*/
 footer .primary {
   background: #3d3d3d;
