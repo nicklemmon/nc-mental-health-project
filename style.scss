@@ -61,13 +61,6 @@ body {
         max-width:  960px;
     }
 
-.jumbotron.row {
-    color:      white;
-    background: $darkGray;
-}
-
-
-
 p { /* paragraph styles */
     font-family:    $secondaryFontStack;
     font-size:      18px;
@@ -85,16 +78,18 @@ p { /* paragraph styles */
 }
 
 .btn {
-    text-transform: uppercase;
+    text-transform:     uppercase;
+    border-radius:      20px;
+    line-height:        20px;
+    padding-left:       20px;
+    padding-right:      20px;
 }
 
     .btn.btn-primary {
         background: $deYork;
         border:     1px solid $deYork;
+        box-shadow: $defaultBoxShadow;
     }
-
-
-
 
 /*===== HEADER HIERARCHY =====*/
 
@@ -146,28 +141,62 @@ h5 {
 		padding-top: 40px;
 	}
 
+        .navbar .navbar-nav > li > a.comment {
+            background:         url(images/comment.svg) no-repeat center 15%;
+            background-size:    22%;
+        }
+
+            /*= navbar comment hover =*/
+            .navbar .navbar-nav > li > a.comment:hover {
+                background:         url(images/comment.svg) no-repeat center 11% $deYork;
+                background-size:    22%;
+            }
+
+        .navbar .navbar-nav > li > a.tag {
+            background:         url(images/tag.svg) no-repeat center 15%;
+            background-size:    22%;
+        }
+            
+            /*= navbar tag hover =*/
+            .navbar .navbar-nav > li > a.tag:hover {
+                background:         url(images/tag.svg) no-repeat center 11% $deYork;
+                background-size:    22%;
+        }
+            
+
+        .navbar .navbar-nav > li > a.profile {
+            background:         url(images/profile.svg) no-repeat center 15%;
+            background-size:    22%;
+        }
+
+            /*= navbar profile hover =*/
+            .navbar .navbar-nav > li > a.profile:hover {
+                background:         url(images/profile.svg) no-repeat center 11% $deYork;
+                background-size:    22%;
+            }
+
 		.navbar-default .navbar-nav > li > a:hover { /* styling hover for navbar nav */
-			color: white;
-			background: $deYork;
-            box-shadow: 3px 0px 3px 0px rgba(70,138,92,.5);
-            transition: all .4s ease;
-            transition-property: background, box-shadow;
-			//@include hoverAnimation($deYork, .5s);
-            //@include shadowHoverAnimation($defaultBoxShadow, .5s);
+            background-color:       $deYork;
+			color:                  white;
+            //box-shadow:             0px 0px 10px 1px rgba(70,138,92,.5);
+            box-shadow:             0px 0px 30px 1px rgba(0,0,0,.1);
+            text-shadow:            1px 1px $persianGreen;
+            transition:             all .5s ease;
+            transition-property:    background, box-shadow, text-shadow;
 		}
 
 .navbar-brand {
-	background-image: url(logo.svg);
-	background-repeat: no-repeat;
-	display: block;
-    padding-top: 40px;
-	width: 280px;
-	background-position: 50%;
-	background-size: 80%;
+	background-image:          url(logo.svg);
+	background-repeat:         no-repeat;
+	display:                   block;
+    padding-top:               40px;
+	width:                     280px;
+	background-position:       50%;
+	background-size:           80%;
 }
 
 	.navbar-brand span { /* hides text */
-		color: white;
+		color:        white;
 	}
 
 /*===== SECTION STYLES =====*/
@@ -175,7 +204,10 @@ h5 {
 /*=== JUMBOTRON ROW ===*/
 
 .jumbotron.row {
-    padding: $defaultPadding; /* adds extra padding to the top for .jumbotron.row */
+    padding:                $defaultPadding; /* adds extra padding to the top for .jumbotron.row */
+    color:                  white;
+    background:             url(images/jumbotron-3.jpg) $darkGray;
+    background-size:        100%;
 }
 
     .jumbotron h1 {
@@ -183,11 +215,23 @@ h5 {
         text-shadow:    4px 4px 4px rgba(0,0,0,.1);
     }
 
+    .jumbotron .subtitle {
+        color:          white;
+    }
+
     .jumbotron.row .btn {
+        margin-top:         $defaultMargin/4;
         color:              white;
         background-color:   $outrageousOrange;
         border-color:       $outrageousOrange;
     }
+
+        .jumbotron.row .btn:hover {
+            color:              white;
+            background-color:   darken($outrageousOrange,10%);
+            border-color:       darken($outrageousOrange,10%);
+            transition:         background-color .5s, border-color .5s; 
+        }
 
 /*=== ACCESS ROW ===*/
 
@@ -196,7 +240,7 @@ h5 {
 }
 
 aside {
-    padding:        $defaultPadding/4 $defaultPadding/4 $defaultPadding/2 $defaultPadding/4;
+    padding:        $defaultPadding/2 $defaultPadding/4 $defaultPadding/2 $defaultPadding/4;
     background:     $deYork;
 }
 
@@ -242,7 +286,7 @@ form.county-select {
 /*=== EXPOSITION ROW ===*/
 
 .exposition.row {
-    background:     url(images/concrete.png);
+    
 }
 
     .exposition.row .col-sm-4 {
@@ -285,7 +329,7 @@ footer {
     }
 
     footer .secondary {
-        background: darken($darkGray, 20%);
+        background: darken($darkGray, 10%);
     }
 
 /*** BEGIN MEDIA QUERIES ***/
@@ -330,7 +374,7 @@ footer {
 @media (min-width: 992px) and (max-width: 1200px) {
     
     aside {
-        margin-top: -$defaultMargin;
+        margin-top:     -$defaultPadding/2;
     }
     
 }
@@ -339,7 +383,7 @@ footer {
 @media (min-width: 1200px) { 
     
     aside {
-        margin-top: -$defaultMargin*2;
+        margin-top:     -$defaultPadding/2;
     }
 
 }

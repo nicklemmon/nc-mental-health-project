@@ -31,11 +31,6 @@ body {
   max-width: 960px;
 }
 
-.jumbotron.row {
-  color: white;
-  background: #3d3d3d;
-}
-
 p {
   /* paragraph styles */
   font-family: "Alegreya", serif;
@@ -56,11 +51,16 @@ p {
 
 .btn {
   text-transform: uppercase;
+  border-radius: 20px;
+  line-height: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .btn.btn-primary {
   background: #79bd8f;
   border: 1px solid #79bd8f;
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.1);
 }
 
 /*===== HEADER HIERARCHY =====*/
@@ -114,13 +114,47 @@ h5 {
   padding-top: 40px;
 }
 
+.navbar .navbar-nav > li > a.comment {
+  background: url(images/comment.svg) no-repeat center 15%;
+  background-size: 22%;
+}
+
+/*= navbar comment hover =*/
+.navbar .navbar-nav > li > a.comment:hover {
+  background: url(images/comment.svg) no-repeat center 11% #79bd8f;
+  background-size: 22%;
+}
+
+.navbar .navbar-nav > li > a.tag {
+  background: url(images/tag.svg) no-repeat center 15%;
+  background-size: 22%;
+}
+
+/*= navbar tag hover =*/
+.navbar .navbar-nav > li > a.tag:hover {
+  background: url(images/tag.svg) no-repeat center 11% #79bd8f;
+  background-size: 22%;
+}
+
+.navbar .navbar-nav > li > a.profile {
+  background: url(images/profile.svg) no-repeat center 15%;
+  background-size: 22%;
+}
+
+/*= navbar profile hover =*/
+.navbar .navbar-nav > li > a.profile:hover {
+  background: url(images/profile.svg) no-repeat center 11% #79bd8f;
+  background-size: 22%;
+}
+
 .navbar-default .navbar-nav > li > a:hover {
   /* styling hover for navbar nav */
+  background-color: #79bd8f;
   color: white;
-  background: #79bd8f;
-  box-shadow: 3px 0px 3px 0px rgba(70, 138, 92, 0.5);
-  transition: all .4s ease;
-  transition-property: background, box-shadow;
+  box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px #00a388;
+  transition: all .5s ease;
+  transition-property: background, box-shadow, text-shadow;
 }
 
 .navbar-brand {
@@ -143,6 +177,9 @@ h5 {
 .jumbotron.row {
   padding: 100px;
   /* adds extra padding to the top for .jumbotron.row */
+  color: white;
+  background: url(images/jumbotron-3.jpg) #3d3d3d;
+  background-size: 100%;
 }
 
 .jumbotron h1 {
@@ -150,10 +187,22 @@ h5 {
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
+.jumbotron .subtitle {
+  color: white;
+}
+
 .jumbotron.row .btn {
+  margin-top: 20px;
   color: white;
   background-color: #ff6138;
   border-color: #ff6138;
+}
+
+.jumbotron.row .btn:hover {
+  color: white;
+  background-color: #ff3905;
+  border-color: #ff3905;
+  transition: background-color .5s, border-color .5s;
 }
 
 /*=== ACCESS ROW ===*/
@@ -163,7 +212,7 @@ h5 {
 }
 
 aside {
-  padding: 25px 25px 50px 25px;
+  padding: 50px 25px 50px 25px;
   background: #79bd8f;
 }
 
@@ -200,10 +249,6 @@ form.county-select input {
 }
 
 /*=== EXPOSITION ROW ===*/
-.exposition.row {
-  background: url(images/concrete.png);
-}
-
 /*= SVG Icons - svgicons.sparkk.fr =*/
 .svg-icon {
   width: 50%;
@@ -233,7 +278,7 @@ footer .primary {
 }
 
 footer .secondary {
-  background: #0a0a0a;
+  background: #242424;
 }
 
 /*** BEGIN MEDIA QUERIES ***/
@@ -269,12 +314,12 @@ footer .secondary {
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1200px) {
   aside {
-    margin-top: -80px;
+    margin-top: -50px;
   }
 }
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   aside {
-    margin-top: -160px;
+    margin-top: -50px;
   }
 }

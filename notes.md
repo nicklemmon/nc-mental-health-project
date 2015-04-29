@@ -79,3 +79,9 @@ Description of the reasons for creating the site, including:
 ---
 
 ###Find treatment
+
+---
+
+####Attribution
+
+Icons from [Bryn Taylor](https://dribbble.com/shots/1938807-77-Essential-Icons-Pattern)
