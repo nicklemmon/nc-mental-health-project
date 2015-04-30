@@ -64,14 +64,15 @@ body {
 
 p { /* paragraph styles */
     font-family:    $secondaryFontStack;
-    font-size:      18px;
+    font-size:      22px;
+    line-height:    140%;
     color:          lighten($darkGray, 20%);
     margin-top:     $defaultMargin/4;
 }
 
 .subtitle {
     margin-top:     $defaultMargin/8; /* makes margin different from typical paragraphs */
-    font-size:      1em;
+    font-size:      1.25em;
     font-weight:    300;
     padding-top:    .5em;
     border-top:     1px solid;
@@ -106,7 +107,7 @@ h2 {
 }
 
 h3 {
-    font-size:      1.75em;
+    font-size:      2em;
     margin-top:     $defaultMargin/4;
 }
 
@@ -241,9 +242,10 @@ h5 {
     margin-top: -30px; /* aligns row appropriately w/ .jumbotron */
 }
 
+/*=== ASIDE ROW ===*/
+
 aside {
     padding:        $defaultPadding/2 $defaultPadding/4 $defaultPadding/2 $defaultPadding/4;
-    border-radius:  0px 0px $defaultRoundedCorner $defaultRoundedCorner; /* rounded corners on bottom of aside */
     background:     $deYork;
 }
 
@@ -272,19 +274,23 @@ aside {
         background:     $caper;
     }
 
-form.county-select {
-    
-}
-
-    form.county-select > select {
-        font-family:    $secondaryFontStack;
-        font-weight:    700;
-        width:          100%;
+    form.county-select {
+        font-size:          1.2em;
     }
 
-    form.county-select input {
-        margin-top:     $defaultMargin/4;
-    }
+        form.county-select > label {
+            font-family:    $primaryFontStack;
+        }
+
+        form.county-select > select {
+            font-family:    $secondaryFontStack;
+            font-weight:    700;
+            width:          100%;
+        }
+
+        form.county-select input {
+            margin-top:     $defaultMargin/4;
+        }
 
 /*=== EXPOSITION ROW ===*/
 
@@ -324,15 +330,12 @@ form.county-select {
 /*=== BIO ROW ===*/
 
 .bio.row {
-    max-width:      960px;
-    margin:         0 auto;
     background:     $darkGray;
     color:          white !important;
-    border-radius:  $defaultRoundedCorner $defaultRoundedCorner 0 0;
 }
 
     .bio.row .img-circle {
-        margin-top: $defaultMargin/2;
+        
     }
 
     .bio.row p {
@@ -398,17 +401,13 @@ footer {
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1200px) {
     
-    aside {
-        margin-top:     -$defaultPadding/2;
-    }
+    
     
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
     
-    aside {
-        margin-top:     -$defaultPadding/2;
-    }
+    
 
 }
