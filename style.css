@@ -47,6 +47,7 @@ p {
   padding-top: .5em;
   border-top: 1px solid;
   text-transform: uppercase;
+  color: #707070;
 }
 
 .btn {
@@ -213,6 +214,8 @@ h5 {
 
 aside {
   padding: 50px 25px 50px 25px;
+  border-radius: 0px 0px 15px 15px;
+  /* rounded corners on bottom of aside */
   background: #79bd8f;
 }
 
@@ -270,6 +273,27 @@ form.county-select input {
   color: white;
   background: #79bd8f;
   border-color: #79bd8f;
+}
+
+/*=== BIO ROW ===*/
+.bio.row {
+  max-width: 960px;
+  margin: 0 auto;
+  background: #3d3d3d;
+  color: white !important;
+  border-radius: 15px 15px 0 0;
+}
+
+.bio.row .img-circle {
+  margin-top: 40px;
+}
+
+.bio.row p {
+  color: white;
+}
+
+.bio.row p.subtitle {
+  color: #707070;
 }
 
 /*===== FOOTER STYLES =====*/
