@@ -353,7 +353,7 @@ footer {
 }
 
     footer .primary {
-        background: $darkGray;
+        background: darken($darkGray, 5%);
     }
 
     footer .secondary {
