@@ -62,6 +62,7 @@ p {
 .btn.btn-primary {
   background: #79bd8f;
   border: 1px solid #79bd8f;
+  -webkit-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -104,6 +105,7 @@ h5 {
   background: url(images/concrete_deyork.png);
   color: white;
   border: none;
+  -webkit-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.1);
   border-radius: 0px;
   /* removes rounded corners */
@@ -118,34 +120,40 @@ h5 {
 
 .navbar .navbar-nav > li > a.comment {
   background: url(images/comment.svg) no-repeat center 15%;
+  -webkit-background-size: 22%;
   background-size: 22%;
 }
 
 /*= navbar comment hover =*/
 .navbar .navbar-nav > li > a.comment:hover {
-  background: url(images/comment.svg) no-repeat center 11% #79bd8f;
+  background: url(images/comment.svg) no-repeat center 15% #79bd8f;
+  -webkit-background-size: 22%;
   background-size: 22%;
 }
 
 .navbar .navbar-nav > li > a.tag {
   background: url(images/tag.svg) no-repeat center 15%;
+  -webkit-background-size: 22%;
   background-size: 22%;
 }
 
 /*= navbar tag hover =*/
 .navbar .navbar-nav > li > a.tag:hover {
   background: url(images/tag.svg) no-repeat center 11% #79bd8f;
+  -webkit-background-size: 22%;
   background-size: 22%;
 }
 
 .navbar .navbar-nav > li > a.profile {
   background: url(images/profile.svg) no-repeat center 15%;
+  -webkit-background-size: 22%;
   background-size: 22%;
 }
 
 /*= navbar profile hover =*/
 .navbar .navbar-nav > li > a.profile:hover {
   background: url(images/profile.svg) no-repeat center 11% #79bd8f;
+  -webkit-background-size: 22%;
   background-size: 22%;
 }
 
@@ -153,9 +161,12 @@ h5 {
   /* styling hover for navbar nav */
   background-color: #79bd8f;
   color: white;
+  -webkit-box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.1);
   text-shadow: 1px 1px #00a388;
+  -webkit-transition: all .5s ease;
   transition: all .5s ease;
+  -webkit-transition-property: background, -webkit-box-shadow, text-shadow;
   transition-property: background, box-shadow, text-shadow;
 }
 
@@ -166,6 +177,7 @@ h5 {
   padding-top: 40px;
   width: 280px;
   background-position: 50%;
+  -webkit-background-size: 80%;
   background-size: 80%;
 }
 
@@ -181,6 +193,7 @@ h5 {
   /* adds extra padding to the top for .jumbotron.row */
   color: white;
   background: url(images/jumbotron-3.jpg) #3d3d3d;
+  -webkit-background-size: 100%;
   background-size: 100%;
 }
 
@@ -193,18 +206,74 @@ h5 {
   color: white;
 }
 
+@-webkit-keyframes shrink {
+  from {
+    -webkit-transform: scale(1.1);
+  }
+
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes shrink {
+  from {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  to {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
 .jumbotron.row .btn {
   margin-top: 20px;
   color: white;
-  background-color: #ff6138;
+  background: #ff6138;
   border-color: #ff6138;
+  -webkit-animation: shrink 0.2s ease-in;
+  animation: shrink 0.2s ease-in;
 }
 
+@-webkit-keyframes scale {
+  from {
+    -webkit-transform: scale(1);
+  }
+
+  to {
+    -webkit-transform: scale(1.1);
+  }
+}
+@keyframes scale {
+  from {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  to {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
 .jumbotron.row .btn:hover {
   color: white;
-  background-color: #ff3905;
+  background-color: #ff4d1f;
+  background-image: -webkit-linear-gradient(#ff4d1f, #ff3905);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff4d1f), to(#ff3905));
+  background-image: linear-gradient(#ff4d1f, #ff3905);
   border-color: #ff3905;
-  transition: background-color .5s, border-color .5s;
+  -webkit-animation: scale 0.4s ease-in;
+  animation: scale 0.4s ease-in;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 /*=== ACCESS ROW ===*/
@@ -216,7 +285,10 @@ h5 {
 /*=== ASIDE ROW ===*/
 aside {
   padding: 50px 25px 50px 25px;
-  background: #79bd8f;
+  background-color: #68b581;
+  background-image: -webkit-linear-gradient(#68b581, #79bd8f);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#68b581), to(#79bd8f));
+  background-image: linear-gradient(#68b581, #79bd8f);
 }
 
 aside h2,

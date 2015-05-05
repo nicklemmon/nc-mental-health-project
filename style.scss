@@ -1,3 +1,4 @@
+@import "bourbon";
 
 /*========== BEGIN SASS STUFF ==========*/
 
@@ -151,7 +152,7 @@ h5 {
 
             /*= navbar comment hover =*/
             .navbar .navbar-nav > li > a.comment:hover {
-                background:         url(images/comment.svg) no-repeat center 11% $deYork;
+                background:         url(images/comment.svg) no-repeat center 15% $deYork;
                 background-size:    22%;
             }
 
@@ -222,18 +223,32 @@ h5 {
         color:          white;
     }
 
+    @include keyframes(shrink) {
+        from {  @include transform(scale(1.1))  }
+        to   {  @include transform(scale(1))    }
+    }
+
     .jumbotron.row .btn {
         margin-top:         $defaultMargin/4;
         color:              white;
-        background-color:   $outrageousOrange;
+        background:         $outrageousOrange;
         border-color:       $outrageousOrange;
+        @include animation(shrink .2s ease-in);
+    }
+
+    @include keyframes(scale) {
+        from {  @include transform(scale(1))   }
+        to {    @include transform(scale(1.1))  }
     }
 
         .jumbotron.row .btn:hover {
             color:              white;
-            background-color:   darken($outrageousOrange,10%);
+            @include linear-gradient(darken($outrageousOrange, 5%), darken($outrageousOrange, 10%));
             border-color:       darken($outrageousOrange,10%);
-            transition:         background-color .5s, border-color .5s; 
+            @include animation(scale 0.4s ease-in);
+            @include animation-delay(.3s);
+            @include animation-duration(.3s);
+            @include animation-fill-mode(forwards);
         }
 
 /*=== ACCESS ROW ===*/
@@ -246,7 +261,7 @@ h5 {
 
 aside {
     padding:        $defaultPadding/2 $defaultPadding/4 $defaultPadding/2 $defaultPadding/4;
-    background:     $deYork;
+    @include linear-gradient(darken($deYork, 5%), $deYork);
 }
 
     aside h2,
