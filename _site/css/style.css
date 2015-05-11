@@ -35,6 +35,9 @@ p {
   color: #707070;
   margin-top: 20px; }
 
+.col-sm-4 p {
+  font-size: 17px; }
+
 .subtitle {
   margin-top: 10px;
   /* makes margin different from typical paragraphs */
@@ -44,6 +47,16 @@ p {
   border-top: 1px solid;
   text-transform: uppercase;
   color: #707070; }
+
+ul li {
+  font-family: "Alegreya", serif;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  display: block;
+  list-style: none;
+  margin-left: -40px;
+  /* aligns list left with container */
+  padding: 5px 0px 5px 0px; }
 
 .btn {
   text-transform: uppercase;
@@ -244,14 +257,17 @@ h5 {
   margin-top: -30px;
   /* aligns row appropriately w/ .jumbotron */ }
 
-/*=== ASIDE ROW ===*/
+/*=== ASIDE and ASIDE ROW ===*/
 aside {
-  padding: 50px 25px 50px 25px;
+  padding: 25px 25px 50px 25px;
   background-color: #68b581;
   background-image: -webkit-linear-gradient(#68b581, #79BD8F);
   background-image: linear-gradient(#68b581, #79BD8F); }
 
 aside h2,
+aside h3,
+aside ul,
+aside a,
 aside .btn {
   color: white;
   text-shadow: 1px 1px #00A388; }
@@ -286,8 +302,13 @@ form.county-select input {
 /*=== EXPOSITION ROW ===*/
 /*= SVG Icons - svgicons.sparkk.fr =*/
 .svg-icon {
-  width: 50%;
-  height: 50%; }
+  height: 200px;
+  width: 200px; }
+
+.svg-icon path {
+  height: 150px;
+  width: 150px;
+  font-size: 1340134px; }
 
 .svg-icon path,
 .svg-icon polygon,
@@ -301,7 +322,8 @@ form.county-select input {
 .exposition.row .btn {
   color: white;
   background: #79BD8F;
-  border-color: #79BD8F; }
+  border-color: #79BD8F;
+  margin-top: 20px; }
 
 /*=== BIO ROW ===*/
 .bio.row {

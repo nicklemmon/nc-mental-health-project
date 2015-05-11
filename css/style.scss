@@ -74,6 +74,10 @@ p { /* paragraph styles */
     margin-top:     $defaultMargin/4;
 }
 
+    .col-sm-4 p {
+        font-size: 17px;
+    }
+
 .subtitle {
     margin-top:     $defaultMargin/8; /* makes margin different from typical paragraphs */
     font-size:      1.25em;
@@ -83,6 +87,20 @@ p { /* paragraph styles */
     text-transform: uppercase;
     color:          lighten($darkGray, 20%);
 }
+
+ul {
+    
+}
+
+    ul li {
+        font-family:    $secondaryFontStack;
+        font-size:      1.1em;
+        text-transform: uppercase;
+        display:        block;
+        list-style:     none;
+        margin-left:    -40px; /* aligns list left with container */
+        padding:        5px 0px 5px 0px;
+    }
 
 .btn {
     text-transform:     uppercase;
@@ -260,14 +278,17 @@ h5 {
     margin-top: -30px; /* aligns row appropriately w/ .jumbotron */
 }
 
-/*=== ASIDE ROW ===*/
+/*=== ASIDE and ASIDE ROW ===*/
 
 aside {
-    padding:        $defaultPadding/2 $defaultPadding/4 $defaultPadding/2 $defaultPadding/4;
+    padding:        $defaultPadding/4 $defaultPadding/4 $defaultPadding/2 $defaultPadding/4;
     @include linear-gradient(darken($deYork, 5%), $deYork);
 }
 
     aside h2,
+    aside h3,
+    aside ul,
+    aside a,
     aside .btn {
         color:          white;
         text-shadow:    1px 1px $persianGreen;
@@ -321,11 +342,14 @@ aside {
     }
 
         /*= SVG Icons - svgicons.sparkk.fr =*/
-
         .svg-icon {
-            width:      50%;
-            height:     50%;
+            @include size(200px);
         }
+
+            .svg-icon path {
+                @include size(150px);
+                font-size: 1340134px;
+            }
 
         .svg-icon path,
         .svg-icon polygon,
@@ -343,6 +367,7 @@ aside {
             color:          white;
             background:     $deYork;
             border-color:   $deYork;
+            margin-top:     $defaultMargin/4;
         }
 
 /*=== BIO ROW ===*/
