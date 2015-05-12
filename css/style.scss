@@ -92,15 +92,27 @@ ul {
     
 }
 
-    ul li {
-        font-family:    $secondaryFontStack;
-        font-size:      1.1em;
-        text-transform: uppercase;
-        display:        block;
-        list-style:     none;
-        margin-left:    -40px; /* aligns list left with container */
-        padding:        5px 0px 5px 0px;
+    .content ul li {
+        font-family:        $secondaryFontStack;
+        font-size:          1.2em;
+        text-transform:     uppercase;
+        list-style:         none;
+        margin-left:        -40px; /* aligns list left with container */
+        padding:            5px 0px 5px 0px;
     }
+
+        .content ul li a {
+            display:            block;
+            padding:            $defaultPadding/8 0 $defaultPadding/8 $defaultPadding/2;
+            background:         url(/images/rightarrow.svg) no-repeat center left;
+            background-size:    28px 28px;
+        }
+
+            .content ul li a:hover {
+                color:                  white;
+                background-color:       darken($deYork, 5%);
+                transition:             all .5s ease;
+            }
 
 .btn {
     text-transform:     uppercase;
@@ -168,42 +180,41 @@ h5 {
 
         .navbar .navbar-nav > li > a.comment {
             background:         url(/images/comment.svg) no-repeat center 15%;
-            background-size:    22%;
+            background-size:    25%;
         }
 
             /*= navbar comment hover =*/
             .navbar .navbar-nav > li > a.comment:hover {
-                background:         url(/images/comment.svg) no-repeat center 15% $deYork;
-                background-size:    22%;
+                background:         url(/images/comment.svg) no-repeat center 11% $deYork;
+                background-size:    25%;
             }
 
         .navbar .navbar-nav > li > a.tag {
             background:         url(/images/tag.svg) no-repeat center 15%;
-            background-size:    22%;
+            background-size:    25%;
         }
             
             /*= navbar tag hover =*/
             .navbar .navbar-nav > li > a.tag:hover {
                 background:         url(/images/tag.svg) no-repeat center 11% $deYork;
-                background-size:    22%;
+                background-size:    25%;
         }
             
 
         .navbar .navbar-nav > li > a.profile {
             background:         url(/images/profile.svg) no-repeat center 15%;
-            background-size:    22%;
+            background-size:    25%;
         }
 
             /*= navbar profile hover =*/
             .navbar .navbar-nav > li > a.profile:hover {
                 background:         url(/images/profile.svg) no-repeat center 11% $deYork;
-                background-size:    22%;
+                background-size:    25%;
             }
 
 		.navbar-default .navbar-nav > li > a:hover { /* styling hover for navbar nav */
             background-color:       $deYork;
 			color:                  white;
-            //box-shadow:             0px 0px 10px 1px rgba(70,138,92,.5);
             box-shadow:             0px 0px 30px 1px rgba(0,0,0,.1);
             text-shadow:            1px 1px $persianGreen;
             transition:             all .5s ease;
@@ -245,7 +256,7 @@ h5 {
     }
 
     @include keyframes(shrink) {
-        from {  @include transform(scale(1.1))  }
+        from {  @include transform(scale(1.05))  }
         to   {  @include transform(scale(1))    }
     }
 
@@ -259,16 +270,16 @@ h5 {
 
     @include keyframes(scale) {
         from {  @include transform(scale(1))   }
-        to {    @include transform(scale(1.1))  }
+        to {    @include transform(scale(1.05))  }
     }
 
         .jumbotron.row .btn:hover {
             color:              white;
             @include linear-gradient(darken($outrageousOrange, 5%), darken($outrageousOrange, 10%));
             border-color:       darken($outrageousOrange,10%);
-            @include animation(scale 0.4s ease-in);
-            @include animation-delay(.3s);
-            @include animation-duration(.3s);
+            @include animation(scale 0.2s ease-in);
+            @include animation-delay(0s);
+            @include animation-duration(0s);
             @include animation-fill-mode(forwards);
         }
 
