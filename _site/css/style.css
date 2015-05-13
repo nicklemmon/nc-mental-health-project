@@ -1,3 +1,9 @@
+@import url(http://reset5.googlecode.com/hg/reset.min.css);
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 /*========== BEGIN SASS STUFF ==========*/
 /*== SASS VARIABLES ==*/
 /*= color variables =*/
@@ -17,7 +23,7 @@ body {
   width: 100%; }
 
 .row {
-  padding: 50px 100px 100px 100px;
+  padding: 100px 100px 100px 100px;
   margin-left: 0px;
   margin-right: 0px; }
 
@@ -25,7 +31,14 @@ body {
   /* centers and limits width of contents to 960px */
   display: block;
   margin: 0 auto;
-  max-width: 960px; }
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  /* sets .row span as container for Neat grid */ }
+  .row span:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 p {
   /* paragraph styles */
@@ -38,7 +51,7 @@ p {
 .col-sm-4 p {
   font-size: 17px; }
 
-.subtitle {
+p.subtitle {
   margin-top: 10px;
   /* makes margin different from typical paragraphs */
   font-size: 1.25em;
@@ -53,7 +66,7 @@ p {
   font-size: 1.2em;
   text-transform: uppercase;
   list-style: none;
-  margin-left: -40px;
+  margin-left: 0px;
   /* aligns list left with container */
   padding: 5px 0px 5px 0px; }
 
@@ -69,11 +82,12 @@ p {
   transition: all .5s ease; }
 
 .btn {
+  display: inline-block;
   text-transform: uppercase;
   border-radius: 20px;
   line-height: 20px;
-  padding-left: 20px;
-  padding-right: 20px; }
+  margin-top: 80px;
+  padding: 10px 20px 10px 20px; }
 
 .btn.btn-primary {
   background: #79BD8F;
@@ -182,6 +196,7 @@ h5 {
   background-size: 100%; }
 
 .jumbotron h1 {
+  color: white;
   font-size: 3.5em;
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1); }
 
@@ -264,7 +279,7 @@ h5 {
 
 /*=== ACCESS ROW ===*/
 .access.row {
-  margin-top: -30px;
+  margin-top: 0px;
   /* aligns row appropriately w/ .jumbotron */ }
 
 /*=== ASIDE and ASIDE ROW ===*/
@@ -310,6 +325,14 @@ form.county-select input {
   margin-top: 20px; }
 
 /*=== EXPOSITION ROW ===*/
+.exposition.row .col-sm-4 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .exposition.row .col-sm-4:last-child {
+    margin-right: 0; }
+
 /*= SVG Icons - svgicons.sparkk.fr =*/
 .svg-icon {
   height: 200px;
@@ -335,10 +358,43 @@ form.county-select input {
   border-color: #79BD8F;
   margin-top: 20px; }
 
+/*=== TREATMENT ROW ===*/
+.treatment.row .col-span-8 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%; }
+  .treatment.row .col-span-8:last-child {
+    margin-right: 0; }
+
+.treatment.row aside {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .treatment.row aside:last-child {
+    margin-right: 0; }
+
 /*=== BIO ROW ===*/
 .bio.row {
   background: #3D3D3D;
   color: white !important; }
+
+.bio.row .img-circle {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .bio.row .img-circle:last-child {
+    margin-right: 0; }
+
+.bio.row .col-span-9 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%; }
+  .bio.row .col-span-9:last-child {
+    margin-right: 0; }
 
 .bio.row p {
   color: white; }

@@ -1,7 +1,8 @@
 ---
 ---
-
+@import url(http://reset5.googlecode.com/hg/reset.min.css);
 @import 'bourbon/bourbon';
+@import 'neat/neat';
 
 /*========== BEGIN SASS STUFF ==========*/
 
@@ -55,7 +56,7 @@ body {
 }
 
 .row {
-    padding:        $defaultPadding/2 $defaultPadding $defaultPadding $defaultPadding;
+    padding:        $defaultPadding $defaultPadding $defaultPadding $defaultPadding;
     margin-left:    0px;
     margin-right:   0px;
 }
@@ -63,7 +64,7 @@ body {
     .row span { /* centers and limits width of contents to 960px */
         display:    block;
         margin:     0 auto;
-        max-width:  960px;
+        @include outer-container; /* sets .row span as container for Neat grid */
     }
 
 p { /* paragraph styles */
@@ -78,8 +79,8 @@ p { /* paragraph styles */
         font-size: 17px;
     }
 
-.subtitle {
-    margin-top:     $defaultMargin/8; /* makes margin different from typical paragraphs */
+p.subtitle {
+    margin-top:     10px; /* makes margin different from typical paragraphs */
     font-size:      1.25em;
     font-weight:    300;
     padding-top:    .5em;
@@ -97,7 +98,7 @@ ul {
         font-size:          1.2em;
         text-transform:     uppercase;
         list-style:         none;
-        margin-left:        -40px; /* aligns list left with container */
+        margin-left:        0px; /* aligns list left with container */
         padding:            5px 0px 5px 0px;
     }
 
@@ -115,11 +116,12 @@ ul {
             }
 
 .btn {
+    display:            inline-block;
     text-transform:     uppercase;
     border-radius:      20px;
     line-height:        20px;
-    padding-left:       20px;
-    padding-right:      20px;
+    margin-top:         $defaultMargin;
+    padding:            10px 20px 10px 20px;
 }
 
     .btn.btn-primary {
@@ -247,6 +249,7 @@ h5 {
 }
 
     .jumbotron h1 {
+        color:          white;
         font-size:      3.5em;
         text-shadow:    4px 4px 4px rgba(0,0,0,.1);
     }
@@ -286,7 +289,7 @@ h5 {
 /*=== ACCESS ROW ===*/
 
 .access.row {
-    margin-top: -30px; /* aligns row appropriately w/ .jumbotron */
+    margin-top: 0px; /* aligns row appropriately w/ .jumbotron */
 }
 
 /*=== ASIDE and ASIDE ROW ===*/
@@ -349,7 +352,7 @@ aside {
 }
 
     .exposition.row .col-sm-4 {
-        
+        @include span-columns(4);
     }
 
         /*= SVG Icons - svgicons.sparkk.fr =*/
@@ -381,6 +384,19 @@ aside {
             margin-top:     $defaultMargin/4;
         }
 
+/*=== TREATMENT ROW ===*/
+
+.treatment.row {
+    
+}
+    .treatment.row .col-span-8 {
+        @include span-columns(8);
+    }
+
+    .treatment.row aside {
+        @include span-columns(4);
+    }
+
 /*=== BIO ROW ===*/
 
 .bio.row {
@@ -389,16 +405,20 @@ aside {
 }
 
     .bio.row .img-circle {
-        
+        @include span-columns(3);
     }
 
-    .bio.row p {
-        color:      white;
+    .bio.row .col-span-9 {
+        @include span-columns(9);
     }
 
-    .bio.row p.subtitle {
-        color:      lighten($darkGray, 20%);
-    }
+        .bio.row p {
+            color:      white;
+        }
+
+        .bio.row p.subtitle {
+            color:      lighten($darkGray, 20%);
+        }
 
 /*===== FOOTER STYLES =====*/
 
