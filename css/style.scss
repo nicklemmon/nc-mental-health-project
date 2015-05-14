@@ -1,8 +1,13 @@
 ---
 ---
+/* CSS reset */
 @import url(http://reset5.googlecode.com/hg/reset.min.css);
+/* importing Bourbon */
 @import 'bourbon/bourbon';
+/* importing Bourbon Neat */
 @import 'neat/neat';
+/* importing hover.scss */
+@import 'hover/hover';
 
 /*========== BEGIN SASS STUFF ==========*/
 
@@ -67,6 +72,14 @@ body {
         @include outer-container; /* sets .row span as container for Neat grid */
     }
 
+a {
+    
+}
+
+    a:hover {
+        text-decoration: none;
+    }
+
 p { /* paragraph styles */
     font-family:    $secondaryFontStack;
     font-size:      22px;
@@ -80,7 +93,7 @@ p { /* paragraph styles */
     }
 
 p.subtitle {
-    margin-top:     10px; /* makes margin different from typical paragraphs */
+    margin-top:     0px; /* makes margin different from typical paragraphs */
     font-size:      1.25em;
     font-weight:    300;
     padding-top:    .5em;
@@ -88,6 +101,21 @@ p.subtitle {
     text-transform: uppercase;
     color:          lighten($darkGray, 20%);
 }
+
+dl {
+    
+}
+
+    dt {
+        margin-bottom:  $defaultMargin/4;
+        font-size:      1.25em;
+        text-transform: uppercase;
+        color:          $outrageousOrange;
+    }
+
+    dd {
+        
+    }
 
 ul {
     
@@ -122,13 +150,18 @@ ul {
     line-height:        20px;
     margin-top:         $defaultMargin;
     padding:            10px 20px 10px 20px;
+    @include bounce-out();
 }
+    .btn:hover {
+        @include grow();
+    }
 
     .btn.btn-primary {
         background: $deYork;
         border:     1px solid $deYork;
         box-shadow: $defaultBoxShadow;
     }
+
 
 /*===== HEADER HIERARCHY =====*/
 
@@ -178,40 +211,42 @@ h5 {
 		color: white;
         text-transform: uppercase;
 		padding-top: 40px;
+        transition:             all .5s ease;
+        transition-property:    background, box-shadow, text-shadow;
 	}
 
         .navbar .navbar-nav > li > a.comment {
-            background:         url(/images/comment.svg) no-repeat center 15%;
+            background:         url(/images/comment.svg) no-repeat center 10px;
             background-size:    25%;
         }
 
             /*= navbar comment hover =*/
             .navbar .navbar-nav > li > a.comment:hover {
-                background:         url(/images/comment.svg) no-repeat center 11% $deYork;
+                background:         url(/images/comment.svg) no-repeat center 5px $deYork;
                 background-size:    25%;
             }
 
         .navbar .navbar-nav > li > a.tag {
-            background:         url(/images/tag.svg) no-repeat center 15%;
+            background:         url(/images/tag.svg) no-repeat center 10px;
             background-size:    25%;
         }
             
             /*= navbar tag hover =*/
             .navbar .navbar-nav > li > a.tag:hover {
-                background:         url(/images/tag.svg) no-repeat center 11% $deYork;
+                background:         url(/images/tag.svg) no-repeat center 5px $deYork;
                 background-size:    25%;
         }
             
 
         .navbar .navbar-nav > li > a.profile {
-            background:         url(/images/profile.svg) no-repeat center 15%;
-            background-size:    25%;
+            background:         url(/images/profile.svg) no-repeat center 7px;
+            background-size:    20%;
         }
 
             /*= navbar profile hover =*/
             .navbar .navbar-nav > li > a.profile:hover {
-                background:         url(/images/profile.svg) no-repeat center 11% $deYork;
-                background-size:    25%;
+                background:         url(/images/profile.svg) no-repeat center 2px $deYork;
+                background-size:    20%;
             }
 
 		.navbar-default .navbar-nav > li > a:hover { /* styling hover for navbar nav */
@@ -267,8 +302,7 @@ h5 {
         margin-top:         $defaultMargin/4;
         color:              white;
         background:         $outrageousOrange;
-        border-color:       $outrageousOrange;
-        @include animation(shrink .2s ease-in);
+        @include bounce-out();
     }
 
     @include keyframes(scale) {
@@ -279,11 +313,7 @@ h5 {
         .jumbotron.row .btn:hover {
             color:              white;
             @include linear-gradient(darken($outrageousOrange, 5%), darken($outrageousOrange, 10%));
-            border-color:       darken($outrageousOrange,10%);
-            @include animation(scale 0.2s ease-in);
-            @include animation-delay(0s);
-            @include animation-duration(0s);
-            @include animation-fill-mode(forwards);
+            @include bounce-in();
         }
 
 /*=== ACCESS ROW ===*/
