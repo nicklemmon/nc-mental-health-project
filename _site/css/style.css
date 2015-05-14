@@ -1,5 +1,4 @@
 /* CSS reset */
-@import url(http://reset5.googlecode.com/hg/reset.min.css);
 /* importing Bourbon */
 /* importing Bourbon Neat */
 * {
@@ -4059,10 +4058,10 @@ p {
   font-size: 22px;
   line-height: 140%;
   color: #707070;
-  margin-top: 20px; }
+  margin-bottom: 20px; }
 
 .col-sm-4 p {
-  font-size: 17px; }
+  font-size: 18px; }
 
 p.subtitle {
   margin-top: 0px;
@@ -4075,10 +4074,19 @@ p.subtitle {
   color: #707070; }
 
 dt {
-  margin-bottom: 20px;
   font-size: 1.25em;
   text-transform: uppercase;
-  color: #FF6138; }
+  color: #FF6138;
+  padding-left: 25px;
+  border-left: solid 10px #BEEB9F; }
+
+dd {
+  display: block;
+  padding-left: 25px;
+  border-left: solid 10px #BEEB9F;
+  font-size: 1.25em;
+  margin-bottom: 20px;
+  font-family: "Alegreya", serif; }
 
 .content ul li {
   font-family: "Alegreya", serif;
@@ -4172,7 +4180,7 @@ h5 {
   /* makes everything fit in to 960px like the rest of the site */
   display: block;
   margin: 0 auto;
-  max-width: 960px; }
+  max-width: 1040px; }
 
 .navbar {
   background: url(/images/concrete_deyork.png);
@@ -4254,34 +4262,11 @@ h5 {
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1); }
 
 .jumbotron .subtitle {
+  margin-top: -20px;
+  /* aligns appopriately within .jumbotron */
+  font-size: 2em;
   color: white; }
 
-@-webkit-keyframes shrink {
-  from {
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -o-transform: scale(1.05);
-    transform: scale(1.05); }
-  to {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1); } }
-@keyframes shrink {
-  from {
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -o-transform: scale(1.05);
-    transform: scale(1.05); }
-  to {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1); } }
 .jumbotron.row .btn {
   margin-top: 20px;
   color: white;
@@ -4302,32 +4287,6 @@ h5 {
     -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
     transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36); }
 
-@-webkit-keyframes scale {
-  from {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1); }
-  to {
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -o-transform: scale(1.05);
-    transform: scale(1.05); } }
-@keyframes scale {
-  from {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1); }
-  to {
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -o-transform: scale(1.05);
-    transform: scale(1.05); } }
 .jumbotron.row .btn:hover {
   color: white;
   background-color: #ff4d1f;
@@ -4393,8 +4352,11 @@ form.county-select > select {
   font-weight: 700;
   width: 100%; }
 
-form.county-select input {
-  margin-top: 20px; }
+form.county-select > input {
+  display: block;
+  border: none !important;
+  padding: 10px 20px 10px 20px !important;
+  margin-top: 20px !important; }
 
 /*=== EXPOSITION ROW ===*/
 .exposition.row .col-sm-4 {
@@ -4443,7 +4405,8 @@ form.county-select input {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 31.76157%; }
+  width: 31.76157%;
+  padding: 0; }
   .treatment.row aside:last-child {
     margin-right: 0; }
 

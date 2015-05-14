@@ -1,7 +1,7 @@
 ---
 ---
 /* CSS reset */
-@import url(http://reset5.googlecode.com/hg/reset.min.css);
+//@import url(http://reset5.googlecode.com/hg/reset.min.css);
 /* importing Bourbon */
 @import 'bourbon/bourbon';
 /* importing Bourbon Neat */
@@ -85,11 +85,11 @@ p { /* paragraph styles */
     font-size:      22px;
     line-height:    140%;
     color:          lighten($darkGray, 20%);
-    margin-top:     $defaultMargin/4;
+    margin-bottom:  $defaultMargin/4;
 }
 
     .col-sm-4 p {
-        font-size: 17px;
+        font-size: 18px;
     }
 
 p.subtitle {
@@ -107,14 +107,20 @@ dl {
 }
 
     dt {
-        margin-bottom:  $defaultMargin/4;
         font-size:      1.25em;
         text-transform: uppercase;
         color:          $outrageousOrange;
+        padding-left:   $defaultPadding/4;
+        border-left:    solid 10px $caper;
     }
 
     dd {
-        
+        display:        block;
+        padding-left:   $defaultPadding/4;
+        border-left:    solid 10px $caper;
+        font-size:      1.25em;
+        margin-bottom:  $defaultMargin/4;
+        font-family:    $secondaryFontStack;
     }
 
 ul {
@@ -196,7 +202,7 @@ h5 {
 .container-fluid span { /* makes everything fit in to 960px like the rest of the site */
     display: block;
     margin: 0 auto;
-    max-width: 960px;
+    max-width: 1040px;
 }
 
 .navbar {
@@ -290,24 +296,17 @@ h5 {
     }
 
     .jumbotron .subtitle {
+        margin-top:     -20px; /* aligns appopriately within .jumbotron */
+        font-size:      2em;
         color:          white;
     }
 
-    @include keyframes(shrink) {
-        from {  @include transform(scale(1.05))  }
-        to   {  @include transform(scale(1))    }
-    }
 
     .jumbotron.row .btn {
         margin-top:         $defaultMargin/4;
         color:              white;
         background:         $outrageousOrange;
         @include bounce-out();
-    }
-
-    @include keyframes(scale) {
-        from {  @include transform(scale(1))   }
-        to {    @include transform(scale(1.05))  }
     }
 
         .jumbotron.row .btn:hover {
@@ -371,8 +370,11 @@ aside {
             width:          100%;
         }
 
-        form.county-select input {
-            margin-top:     $defaultMargin/4;
+        form.county-select > input {
+            display:        block;
+            border:         none !important;
+            padding:        10px 20px 10px 20px !important;
+            margin-top:     $defaultMargin/4 !important;
         }
 
 /*=== EXPOSITION ROW ===*/
@@ -425,6 +427,7 @@ aside {
 
     .treatment.row aside {
         @include span-columns(4);
+        padding:    0;
     }
 
 /*=== BIO ROW ===*/
