@@ -1,0 +1,21 @@
+/*=== TREATMENT ROW ===*/
+
+.treatment.row {
+    
+}
+    .treatment.row .col-span-8 {
+        @include span-columns(8);
+    }
+
+    .treatment.row aside {
+        @include span-columns(4);
+        padding:    0;
+    }
+
+        .treatment.row aside ul {
+            margin-left:    0px;
+        }
+
+            .treatment.row aside li a {
+                padding:    $defaultPadding/8 $defaultPadding/4 $defaultPadding/8 $defaultPadding/4;
+            }

@@ -1,0 +1,80 @@
+/*===== NAVBAR STYLES =====*/
+
+.container-fluid span { /* makes everything fit in to 960px like the rest of the site */
+    display: block;
+    margin: 0 auto;
+    max-width: 1040px;
+}
+
+.navbar {
+	background: url(/images/concrete_deyork.png);
+	color: white;
+    border: none;
+	box-shadow: $defaultBoxShadow;
+	border-radius: 0px; /* removes rounded corners */
+}
+
+	.navbar-default .navbar-nav > li > a { /* styling navbar nav */
+		color: white;
+        text-transform: uppercase;
+		padding-top: 40px;
+        transition:             all .5s ease;
+        transition-property:    background, box-shadow, text-shadow;
+	}
+
+        .navbar .navbar-nav > li > a.comment {
+            background:         url(/images/comment.svg) no-repeat center 10px;
+            background-size:    25%;
+        }
+
+            /*= navbar comment hover =*/
+            .navbar .navbar-nav > li > a.comment:hover {
+                background:         url(/images/comment.svg) no-repeat center 5px $deYork;
+                background-size:    25%;
+            }
+
+        .navbar .navbar-nav > li > a.tag {
+            background:         url(/images/tag.svg) no-repeat center 10px;
+            background-size:    25%;
+        }
+            
+            /*= navbar tag hover =*/
+            .navbar .navbar-nav > li > a.tag:hover {
+                background:         url(/images/tag.svg) no-repeat center 5px $deYork;
+                background-size:    25%;
+        }
+            
+
+        .navbar .navbar-nav > li > a.profile {
+            background:         url(/images/profile.svg) no-repeat center 7px;
+            background-size:    20%;
+        }
+
+            /*= navbar profile hover =*/
+            .navbar .navbar-nav > li > a.profile:hover {
+                background:         url(/images/profile.svg) no-repeat center 2px $deYork;
+                background-size:    20%;
+            }
+
+		.navbar-default .navbar-nav > li > a:hover { /* styling hover for navbar nav */
+            background-color:       $deYork;
+			color:                  white;
+            box-shadow:             0px 0px 30px 1px rgba(0,0,0,.1);
+            text-shadow:            1px 1px $persianGreen;
+            transition:             all .5s ease;
+            transition-property:    background, box-shadow, text-shadow;
+		}
+
+.navbar-brand {
+	background-image:          url(logo.svg);
+	background-repeat:         no-repeat;
+	display:                   block;
+    padding-top:               40px;
+	width:                     280px;
+	background-position:       50%;
+	background-size:           80%;
+}
+
+	.navbar-brand span { /* hides text */
+		color:        white;
+	}

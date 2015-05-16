@@ -1,0 +1,55 @@
+/*=== ASIDE and ASIDE ROW ===*/
+
+aside {
+    padding:        $defaultPadding/4 $defaultPadding/4 $defaultPadding/2 $defaultPadding/4;
+    @include linear-gradient(darken($deYork, 5%), $deYork);
+}
+
+    aside h2,
+    aside h3,
+    aside ul,
+    aside a,
+    aside .btn {
+        color:          white;
+        text-shadow:    1px 1px $persianGreen;
+    }
+
+    aside .subtitle {
+        color:  $persianGreen;
+    }
+
+    aside label {
+        font-family:    $secondaryFontStack;
+        color:          white;
+        text-shadow:    1px 1px $persianGreen;
+        margin-top:     $defaultMargin/4;
+    }
+
+    aside select {
+    }
+
+    aside .btn {
+        color:          white;
+        background:     $caper;
+    }
+
+    form.county-select {
+        font-size:          1.2em;
+    }
+
+        form.county-select > label {
+            font-family:    $primaryFontStack;
+        }
+
+        form.county-select > select {
+            font-family:    $secondaryFontStack;
+            font-weight:    700;
+            width:          100%;
+        }
+
+        form.county-select > input {
+            display:        block;
+            border:         none !important;
+            padding:        10px 20px 10px 20px !important;
+            margin-top:     $defaultMargin/4 !important;
+        }

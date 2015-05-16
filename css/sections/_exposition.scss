@@ -1,0 +1,64 @@
+/*=== EXPOSITION ROW ===*/
+
+.exposition.row {
+    
+}
+
+    .exposition.row .col-sm-4 {
+        @include span-columns(4);
+    }
+
+        /*= SVG Icons - svgicons.sparkk.fr =*/
+        .svg-icon {
+            @include size(200px);
+        }
+
+            .svg-icon path {
+                @include size(150px);
+                font-size: 1340134px;
+            }
+
+        .svg-icon path,
+        .svg-icon polygon,
+        .svg-icon rect {
+            fill:       $outrageousOrange;
+
+        }
+
+        .svg-icon circle {
+            stroke:         #4691f6;
+            stroke-width:   1;
+        }
+
+        .exposition.row .btn {
+            color:          white;
+            background:     $deYork;
+            border-color:   $deYork;
+            margin-top:     $defaultMargin/4;
+        }
+
+/*=== BEGIN GLOBAL MEDIA QUERIES ===*/
+
+/* Smallest devices (phone, 768px and below) */
+@media (max-width: 768px) {
+     
+    .exposition.row .col-sm-4 {
+        text-align: center;
+    }
+   
+}
+
+/* Small devices (tablets, 768px to 992px) */ 
+@media (min-width: 768px) and (max-width: 992px) {
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1200px) {
+    
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    
+}

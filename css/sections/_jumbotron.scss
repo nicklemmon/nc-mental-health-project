@@ -1,0 +1,64 @@
+/*=== JUMBOTRON ROW ===*/
+
+.jumbotron.row {
+    padding:                $defaultPadding; /* adds extra padding to the top for .jumbotron.row */
+    color:                  white;
+    background:             url(/images/jumbotron-3.jpg) $darkGray;
+    background-size:        100%;
+}
+
+    .jumbotron h1 {
+        color:          white;
+        font-size:      3.5em;
+        text-shadow:    4px 4px 4px rgba(0,0,0,.1);
+    }
+
+    .jumbotron .subtitle {
+        margin-top:     -20px; /* aligns appopriately within .jumbotron */
+        font-size:      2em;
+        color:          white;
+    }
+
+
+    .jumbotron.row .btn {
+        margin-top:         $defaultMargin/4;
+        color:              white;
+        background:         $outrageousOrange;
+        @include bounce-out();
+    }
+
+        .jumbotron.row .btn:hover {
+            color:              white;
+            @include linear-gradient(darken($outrageousOrange, 5%), darken($outrageousOrange, 10%));
+            @include bounce-in();
+        }
+
+/*=== BEGIN MEDIA QUERIES ===*/
+
+/* Smallest devices (phone, 768px and below) */
+@media (max-width: 768px) {
+    
+    .jumbotron h1 {
+        font-size:      2.5em;
+    }
+   
+}
+
+/* Small devices (tablets, 768px to 992px) */ 
+@media (min-width: 768px) and (max-width: 992px) {
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1200px) {
+    
+    
+    
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    
+    
+
+}
