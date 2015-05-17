@@ -15,7 +15,6 @@
 
             .svg-icon path {
                 @include size(150px);
-                font-size: 1340134px;
             }
 
         .svg-icon path,
@@ -44,6 +43,7 @@
      
     .exposition.row .col-sm-4 {
         text-align: center;
+        @include span-columns(12);
     }
    
 }

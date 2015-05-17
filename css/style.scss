@@ -3,8 +3,6 @@
 ---
 commented out for PrePros*/
 
-/* CSS reset */
-//@import url(http://reset5.googlecode.com/hg/reset.min.css);
 /* importing Bourbon */
 @import 'bourbon/bourbon';
 /* importing Bourbon Neat */
@@ -17,7 +15,6 @@ commented out for PrePros*/
 @import 'vars/_colors';
 /* importing sections index */
 @import 'sections/-sections-index';
-
 
 	/*== SASS MIX-INS ==*/
 
@@ -111,27 +108,7 @@ ul {
     
 }
 
-    .content ul li {
-        font-family:        $secondaryFontStack;
-        font-size:          1.2em;
-        text-transform:     uppercase;
-        list-style:         none;
-        margin-left:        0px; /* aligns list left with container */
-        padding:            5px 0px 5px 0px;
-    }
-
-        .content ul li a {
-            display:            block;
-            padding:            $defaultPadding/8 0 $defaultPadding/8 $defaultPadding/2;
-            background:         url(/images/rightarrow.svg) no-repeat center left;
-            background-size:    28px 28px;
-        }
-
-            .content ul li a:hover {
-                color:                  white;
-                background-color:       darken($deYork, 5%);
-                transition:             all .5s ease;
-            }
+    
 
 .btn {
     display:            inline-block;
@@ -168,7 +145,7 @@ h2 {
 
 h3 {
     font-size:      2em;
-    margin-top:     $defaultMargin/4;
+    line-height:    130%;
 }
 
 h4 {
@@ -188,8 +165,18 @@ h5 {
 /* Smallest devices (phone, 768px and below) */
 @media (max-width: 768px) {
     
+    p {
+        font-size:      17px;
+        line-height:    150%;
+    }
+    
+        p.subtitle {
+            margin-top: 20px;
+        }
+    
     h2 {
         font-size:      2em;
+        line-height:    120%;
     }
     
     h3 {
@@ -204,12 +191,22 @@ h5 {
     .row,
     .jumbotron.row {
         padding:        $defaultPadding/2 $defaultPadding/4 $defaultPadding/2 $defaultPadding/4;
-    }    
+    }
+    
+    .btn {
+        width:          100%;
+        text-align:     center;
+    }
     
 }
 
 /* Small devices (tablets, 768px to 992px) */ 
 @media (min-width: 768px) and (max-width: 992px) {
+
+    h3 {
+        font-size:      1.5em;
+        line-height:    130%;
+    }
 
 }
 

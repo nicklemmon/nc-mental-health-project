@@ -15,7 +15,7 @@ aside {
     }
 
     aside .subtitle {
-        color:  $persianGreen;
+        color:  $persianGreen !important;
     }
 
     aside label {
@@ -53,3 +53,31 @@ aside {
             padding:        10px 20px 10px 20px !important;
             margin-top:     $defaultMargin/4 !important;
         }
+
+/*=== BEGIN GLOBAL MEDIA QUERIES ===*/
+
+/* Smallest devices (phone, 768px and below) */
+@media (max-width: 768px) {
+    
+     form.county-select > input {
+        width:      100%;
+        text-align: center;
+    }
+    
+}
+
+/* Small devices (tablets, 768px to 992px) */ 
+@media (min-width: 768px) and (max-width: 992px) {
+
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1200px) {
+    
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    
+}

@@ -2,7 +2,6 @@
 ---
 ---
 commented out for PrePros*/
-/* CSS reset */
 /* importing Bourbon */
 /* importing Bourbon Neat */
 * {
@@ -4909,7 +4908,7 @@ commented out for PrePros*/
   /* adds extra padding to the top for .jumbotron.row */
   color: white;
   background: url(/images/jumbotron-3.jpg) #3d3d3d;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .jumbotron h1 {
@@ -4929,6 +4928,7 @@ commented out for PrePros*/
   margin-top: 20px;
   color: white;
   background: #ff6138;
+  cursor: pointer;
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
@@ -4974,7 +4974,13 @@ commented out for PrePros*/
 /* Smallest devices (phone, 768px and below) */
 @media (max-width: 768px) {
   .jumbotron h1 {
-    font-size: 2.5em;
+    font-size: 2.25em;
+    line-height: 120%;
+  }
+
+  .jumbotron .subtitle {
+    margin-top: 20px;
+    font-size: 1.25em;
   }
 }
 /* Small devices (tablets, 768px to 992px) */
@@ -5004,7 +5010,7 @@ aside .btn {
 }
 
 aside .subtitle {
-  color: #00a388;
+  color: #00a388 !important;
 }
 
 aside label {
@@ -5040,6 +5046,17 @@ form.county-select > input {
   margin-top: 20px !important;
 }
 
+/*=== BEGIN GLOBAL MEDIA QUERIES ===*/
+/* Smallest devices (phone, 768px and below) */
+@media (max-width: 768px) {
+  form.county-select > input {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* Small devices (tablets, 768px to 992px) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
 /*=== EXPOSITION ROW ===*/
 .exposition.row .col-sm-4 {
   float: left;
@@ -5060,7 +5077,6 @@ form.county-select > input {
 .svg-icon path {
   height: 150px;
   width: 150px;
-  font-size: 1340134px;
 }
 
 .svg-icon path,
@@ -5086,6 +5102,13 @@ form.county-select > input {
 @media (max-width: 768px) {
   .exposition.row .col-sm-4 {
     text-align: center;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  .exposition.row .col-sm-4:last-child {
+    margin-right: 0;
   }
 }
 /* Small devices (tablets, 768px to 992px) */
@@ -5107,33 +5130,118 @@ form.county-select > input {
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
-  padding: 0;
+  padding: 25px 0 0 0;
 }
 .treatment.row aside:last-child {
   margin-right: 0;
 }
 
-.treatment.row aside ul {
+.treatment.row aside h4 {
+  color: white;
+  padding-top: 25px;
+  padding-bottom: 12.5px;
+  text-align: center;
+}
+
+aside ul li {
+  font-family: "Alegreya", serif;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  list-style: none;
   margin-left: 0px;
+  /* aligns list left with container */
 }
 
-.treatment.row aside li a {
-  padding: 12.5px 25px 12.5px 25px;
+aside ul li a {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  display: block;
+  width: 100%;
+  padding: 12.5px 25px 12.5px 50px;
+  background: url(/images/rightarrow.svg) no-repeat 5% center;
+  background-size: 28px 28px;
+}
+aside ul li a:hover, aside ul li a:focus, aside ul li a:active {
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
 }
 
+aside ul li a:hover {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  color: white;
+  background-color: #68b581;
+  transition: all .5s ease;
+}
+aside ul li a:hover:hover, aside ul li a:hover:focus, aside ul li a:hover:active {
+  -webkit-transform: translateY(8px);
+  transform: translateY(8px);
+}
+
+/*=== BEGIN GLOBAL MEDIA QUERIES ===*/
+/* Smallest devices (phone, 768px and below) */
+@media (max-width: 768px) {
+  .treatment.row .col-span-8 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  .treatment.row .col-span-8:last-child {
+    margin-right: 0;
+  }
+
+  .treatment.row aside {
+    float: left;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  .treatment.row aside:last-child {
+    margin-right: 0;
+  }
+}
+/* Small devices (tablets, 768px to 992px) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
 /*=== BIO ROW ===*/
 .bio.row {
   background: #3d3d3d;
   color: white !important;
 }
 
-.bio.row .img-circle {
+.bio.row .img {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 23.23176%;
 }
-.bio.row .img-circle:last-child {
+.bio.row .img:last-child {
   margin-right: 0;
 }
 
@@ -5155,6 +5263,34 @@ form.county-select > input {
   color: #707070;
 }
 
+/*=== BEGIN GLOBAL MEDIA QUERIES ===*/
+/* Smallest devices (phone, 768px and below) */
+@media (max-width: 768px) {
+  .bio.row img {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    display: block;
+    margin-bottom: 40px;
+  }
+  .bio.row img:last-child {
+    margin-right: 0;
+  }
+
+  .bio.row .col-span-9 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  .bio.row .col-span-9:last-child {
+    margin-right: 0;
+  }
+}
+/* Small devices (tablets, 768px to 992px) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
 /*===== FOOTER STYLES =====*/
 footer .primary {
   background: #303030;
@@ -5245,29 +5381,6 @@ dd {
   font-family: "Alegreya", serif;
 }
 
-.content ul li {
-  font-family: "Alegreya", serif;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  list-style: none;
-  margin-left: 0px;
-  /* aligns list left with container */
-  padding: 5px 0px 5px 0px;
-}
-
-.content ul li a {
-  display: block;
-  padding: 12.5px 0 12.5px 50px;
-  background: url(/images/rightarrow.svg) no-repeat center left;
-  background-size: 28px 28px;
-}
-
-.content ul li a:hover {
-  color: white;
-  background-color: #68b581;
-  transition: all .5s ease;
-}
-
 .btn {
   display: inline-block;
   text-transform: uppercase;
@@ -5332,7 +5445,7 @@ h2 {
 
 h3 {
   font-size: 2em;
-  margin-top: 20px;
+  line-height: 130%;
 }
 
 h4 {
@@ -5349,8 +5462,18 @@ h5 {
 /*=== BEGIN GLOBAL MEDIA QUERIES ===*/
 /* Smallest devices (phone, 768px and below) */
 @media (max-width: 768px) {
+  p {
+    font-size: 17px;
+    line-height: 150%;
+  }
+
+  p.subtitle {
+    margin-top: 20px;
+  }
+
   h2 {
     font-size: 2em;
+    line-height: 120%;
   }
 
   h3 {
@@ -5366,7 +5489,18 @@ h5 {
   .jumbotron.row {
     padding: 50px 25px 50px 25px;
   }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
 }
 /* Small devices (tablets, 768px to 992px) */
+@media (min-width: 768px) and (max-width: 992px) {
+  h3 {
+    font-size: 1.5em;
+    line-height: 130%;
+  }
+}
 /* Medium devices (desktops, 992px and up) */
 /* Large devices (large desktops, 1200px and up) */

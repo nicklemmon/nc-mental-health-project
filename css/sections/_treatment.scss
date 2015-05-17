@@ -9,13 +9,69 @@
 
     .treatment.row aside {
         @include span-columns(4);
-        padding:    0;
+        padding:    $defaultPadding/4 0 0 0;
     }
 
-        .treatment.row aside ul {
-            margin-left:    0px;
+        .treatment.row aside h4 {
+            color:          white;
+            padding-top:    $defaultPadding/4;
+            padding-bottom: $defaultPadding/8;
+            text-align:     center;
         }
 
-            .treatment.row aside li a {
-                padding:    $defaultPadding/8 $defaultPadding/4 $defaultPadding/8 $defaultPadding/4;
+        aside ul li {
+            font-family:        $secondaryFontStack;
+            font-size:          1.2em;
+            text-transform:     uppercase;
+            list-style:         none;
+            margin-left:        0px; /* aligns list left with container */
+        }
+
+        aside ul li a {
+            @include float();
+            display:            block;
+            width:              100%;
+            padding:    $defaultPadding/8 $defaultPadding/4 $defaultPadding/8 $defaultPadding/2;
+            background:         url(/images/rightarrow.svg) no-repeat 5% center;
+            background-size:    28px 28px;
+        }
+
+            aside ul li a:hover {
+                @include sink();
+                color:                  white;
+                background-color:       darken($deYork, 5%);
+                transition:             all .5s ease;
+                
             }
+
+/*=== BEGIN GLOBAL MEDIA QUERIES ===*/
+
+/* Smallest devices (phone, 768px and below) */
+@media (max-width: 768px) {
+    
+    .treatment.row .col-span-8 {
+        @include span-columns(12);
+    }
+    
+    .treatment.row aside {
+        float:      left;
+        @include span-columns(12);
+    }
+    
+}
+
+/* Small devices (tablets, 768px to 992px) */ 
+@media (min-width: 768px) and (max-width: 992px) {
+
+ 
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1200px) {
+    
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    
+}

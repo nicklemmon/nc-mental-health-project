@@ -5,7 +5,7 @@
     color:          white !important;
 }
 
-    .bio.row .img-circle {
+    .bio.row .img {
         @include span-columns(3);
     }
 
@@ -20,3 +20,36 @@
         .bio.row p.subtitle {
             color:      lighten($darkGray, 20%);
         }
+
+/*=== BEGIN GLOBAL MEDIA QUERIES ===*/
+
+/* Smallest devices (phone, 768px and below) */
+@media (max-width: 768px) {
+    
+    .bio.row img {
+        @include span-columns(12);
+        display:    block;
+        margin-bottom:  $defaultMargin/2;
+    }
+    
+    .bio.row .col-span-9 {
+        @include span-columns(12);
+    }
+    
+}
+
+/* Small devices (tablets, 768px to 992px) */ 
+@media (min-width: 768px) and (max-width: 992px) {
+
+ 
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1200px) {
+    
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    
+}
