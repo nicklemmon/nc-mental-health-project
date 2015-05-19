@@ -1,7 +1,6 @@
 /*=== ASIDE and ASIDE ROW ===*/
 
 aside {
-    padding:        $defaultPadding/4 $defaultPadding/4 $defaultPadding/2 $defaultPadding/4;
     @include linear-gradient(darken($deYork, 5%), $deYork);
 }
 
@@ -15,7 +14,8 @@ aside {
     }
 
     aside .subtitle {
-        color:  $persianGreen !important;
+        color:          $caper !important;
+        text-shadow:    1px 1px $persianGreen;
     }
 
     aside label {

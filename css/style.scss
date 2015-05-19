@@ -70,7 +70,7 @@ p { /* paragraph styles */
 }
 
     .col-sm-4 p {
-        font-size: 18px;
+        font-size: 20px;
     }
 
 p.subtitle {
@@ -91,24 +91,26 @@ dl {
         font-size:      1.25em;
         text-transform: uppercase;
         color:          $outrageousOrange;
-        padding-left:   $defaultPadding/4;
-        border-left:    solid 10px $caper;
+        padding-left:   $defaultMargin/1.5;
+        margin-top:     $defaultMargin;
+        margin-left:    $defaultPadding*2;
+        border-left:    solid 2px $deYork;
     }
 
     dd {
         display:        block;
-        padding-left:   $defaultPadding/4;
-        border-left:    solid 10px $caper;
-        font-size:      1.25em;
-        margin-bottom:  $defaultMargin/4;
+        color:          lighten($darkGray, 40%);
+        padding-left:   $defaultMargin/1.5;
+        font-size:      1.5em;
+        margin-left:    $defaultPadding*2;
+        margin-bottom:  $defaultMargin;
         font-family:    $secondaryFontStack;
+        border-left:    solid 2px $deYork;
     }
 
 ul {
     
-}
-
-    
+} 
 
 .btn {
     display:            inline-block;
@@ -145,6 +147,8 @@ h2 {
 
 h3 {
     font-size:      2em;
+    font-color:     $darkGray;
+    margin-bottom:  10px;
     line-height:    130%;
 }
 

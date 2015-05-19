@@ -1,6 +1,7 @@
 /*=== JUMBOTRON ROW ===*/
 
 .jumbotron.row {
+    text-align:             center;
     padding:                $defaultPadding; /* adds extra padding to the top for .jumbotron.row */
     color:                  white;
     background:             url(/images/jumbotron-3.jpg) $darkGray;
@@ -15,13 +16,16 @@
 
     .jumbotron .subtitle {
         margin-top:     -20px; /* aligns appopriately within .jumbotron */
-        font-size:      2em;
+        font-size:      1.75em;
         color:          white;
     }
 
 
     .jumbotron.row .btn {
+        display:            block;
         margin-top:         $defaultMargin/4;
+        padding-left:       40px;
+        padding-right:      40px;
         color:              white;
         background:         $outrageousOrange;
         cursor:             pointer;

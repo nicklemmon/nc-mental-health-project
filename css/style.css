@@ -4904,6 +4904,7 @@ commented out for PrePros*/
 
 /*=== JUMBOTRON ROW ===*/
 .jumbotron.row {
+  text-align: center;
   padding: 100px;
   /* adds extra padding to the top for .jumbotron.row */
   color: white;
@@ -4920,12 +4921,15 @@ commented out for PrePros*/
 .jumbotron .subtitle {
   margin-top: -20px;
   /* aligns appopriately within .jumbotron */
-  font-size: 2em;
+  font-size: 1.75em;
   color: white;
 }
 
 .jumbotron.row .btn {
+  display: block;
   margin-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
   color: white;
   background: #ff6138;
   cursor: pointer;
@@ -4993,34 +4997,38 @@ commented out for PrePros*/
 }
 
 /*=== ASIDE and ASIDE ROW ===*/
-aside {
-  padding: 25px 25px 50px 25px;
+aside, .system.row {
   background-color: #68b581;
   background-image: -webkit-linear-gradient(#68b581, #79bd8f);
   background-image: linear-gradient(#68b581, #79bd8f);
 }
 
-aside h2,
+aside h2, .system.row h2,
 aside h3,
+.system.row h3,
 aside ul,
+.system.row ul,
 aside a,
-aside .btn {
+.system.row a,
+aside .btn,
+.system.row .btn {
   color: white;
   text-shadow: 1px 1px #00a388;
 }
 
-aside .subtitle {
-  color: #00a388 !important;
+aside .subtitle, .system.row .subtitle {
+  color: #beeb9f !important;
+  text-shadow: 1px 1px #00a388;
 }
 
-aside label {
+aside label, .system.row label {
   font-family: "Alegreya", serif;
   color: white;
   text-shadow: 1px 1px #00a388;
   margin-top: 20px;
 }
 
-aside .btn {
+aside .btn, .system.row .btn {
   color: white;
   background: #beeb9f;
 }
@@ -5119,31 +5127,56 @@ form.county-select > input {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 65.88078%;
+  width: 100%;
 }
 .treatment.row .col-span-8:last-child {
   margin-right: 0;
 }
 
-.treatment.row aside {
+.treatment.row .col-span-8 dl span.icon {
+  display: inline-block;
+  float: left;
+  margin-right: 20px;
+  height: 150px;
+  width: 150px;
+  background-size: cover;
+}
+
+span.icon#therapy {
+  background-image: url(/images/icon-therapy.svg);
+}
+
+span.icon#medmgt {
+  background-image: url(/images/icon-medmgt.svg);
+}
+
+span.icon#psr {
+  background-image: url(/images/icon-psr.svg);
+}
+
+span.icon#actt {
+  background-image: url(/images/icon-actt.svg);
+}
+
+.treatment.row aside, .treatment.row .system.row {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
   padding: 25px 0 0 0;
 }
-.treatment.row aside:last-child {
+.treatment.row aside:last-child, .treatment.row .system.row:last-child {
   margin-right: 0;
 }
 
-.treatment.row aside h4 {
+.treatment.row aside h4, .treatment.row .system.row h4 {
   color: white;
   padding-top: 25px;
   padding-bottom: 12.5px;
   text-align: center;
 }
 
-aside ul li {
+aside ul li, .system.row ul li {
   font-family: "Alegreya", serif;
   font-size: 1.2em;
   text-transform: uppercase;
@@ -5152,7 +5185,7 @@ aside ul li {
   /* aligns list left with container */
 }
 
-aside ul li a {
+aside ul li a, .system.row ul li a {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
@@ -5173,12 +5206,12 @@ aside ul li a {
   background: url(/images/rightarrow.svg) no-repeat 5% center;
   background-size: 28px 28px;
 }
-aside ul li a:hover, aside ul li a:focus, aside ul li a:active {
+aside ul li a:hover, .system.row ul li a:hover, aside ul li a:focus, .system.row ul li a:focus, aside ul li a:active, .system.row ul li a:active {
   -webkit-transform: translateY(-8px);
   transform: translateY(-8px);
 }
 
-aside ul li a:hover {
+aside ul li a:hover, .system.row ul li a:hover {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
@@ -5197,7 +5230,7 @@ aside ul li a:hover {
   background-color: #68b581;
   transition: all .5s ease;
 }
-aside ul li a:hover:hover, aside ul li a:hover:focus, aside ul li a:hover:active {
+aside ul li a:hover:hover, .system.row ul li a:hover:hover, aside ul li a:hover:focus, .system.row ul li a:hover:focus, aside ul li a:hover:active, .system.row ul li a:hover:active {
   -webkit-transform: translateY(8px);
   transform: translateY(8px);
 }
@@ -5215,17 +5248,23 @@ aside ul li a:hover:hover, aside ul li a:hover:focus, aside ul li a:hover:active
     margin-right: 0;
   }
 
-  .treatment.row aside {
+  .treatment.row aside, .treatment.row .system.row {
     float: left;
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 100%;
   }
-  .treatment.row aside:last-child {
+  .treatment.row aside:last-child, .treatment.row .system.row:last-child {
     margin-right: 0;
   }
 }
+/* Small devices (tablets, 768px to 992px) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+/*=== SYSTEM ROW ===*/
+/*=== BEGIN SYSTEM ROW MEDIA QUERIES ===*/
+/* Smallest devices (phone, 768px and below) */
 /* Small devices (tablets, 768px to 992px) */
 /* Medium devices (desktops, 992px and up) */
 /* Large devices (large desktops, 1200px and up) */
@@ -5235,13 +5274,13 @@ aside ul li a:hover:hover, aside ul li a:hover:focus, aside ul li a:hover:active
   color: white !important;
 }
 
-.bio.row .img {
+.bio.row img {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 23.23176%;
 }
-.bio.row .img:last-child {
+.bio.row img:last-child {
   margin-right: 0;
 }
 
@@ -5350,7 +5389,7 @@ p {
 }
 
 .col-sm-4 p {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 p.subtitle {
@@ -5368,17 +5407,21 @@ dt {
   font-size: 1.25em;
   text-transform: uppercase;
   color: #ff6138;
-  padding-left: 25px;
-  border-left: solid 10px #beeb9f;
+  padding-left: 53.33333px;
+  margin-top: 80px;
+  margin-left: 200px;
+  border-left: solid 2px #79bd8f;
 }
 
 dd {
   display: block;
-  padding-left: 25px;
-  border-left: solid 10px #beeb9f;
-  font-size: 1.25em;
-  margin-bottom: 20px;
+  color: #a3a3a3;
+  padding-left: 53.33333px;
+  font-size: 1.5em;
+  margin-left: 200px;
+  margin-bottom: 80px;
   font-family: "Alegreya", serif;
+  border-left: solid 2px #79bd8f;
 }
 
 .btn {
@@ -5445,6 +5488,8 @@ h2 {
 
 h3 {
   font-size: 2em;
+  font-color: #3d3d3d;
+  margin-bottom: 10px;
   line-height: 130%;
 }
 

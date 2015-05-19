@@ -4,8 +4,32 @@
     
 }
     .treatment.row .col-span-8 {
-        @include span-columns(8);
+        @include span-columns(12);
     }
+
+        .treatment.row .col-span-8 dl span.icon {
+            display:            inline-block;
+            float:              left;
+            margin-right:       20px;
+            @include size(150px);
+            background-size:    cover;
+        }
+
+            span.icon#therapy {
+                background-image:     url(/images/icon-therapy.svg);
+            }
+
+            span.icon#medmgt {
+                background-image:     url(/images/icon-medmgt.svg);
+            }
+
+            span.icon#psr {
+                background-image:     url(/images/icon-psr.svg);
+            }
+
+            span.icon#actt {
+                background-image:     url(/images/icon-actt.svg);
+            }
 
     .treatment.row aside {
         @include span-columns(4);
