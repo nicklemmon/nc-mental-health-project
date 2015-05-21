@@ -5034,7 +5034,14 @@ aside .btn, .system.row .btn {
 }
 
 form.county-select {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 57.35098%;
   font-size: 1.2em;
+}
+form.county-select:last-child {
+  margin-right: 0;
 }
 
 form.county-select > label {
@@ -5047,19 +5054,58 @@ form.county-select > select {
   width: 100%;
 }
 
-form.county-select > input {
+form.county-select > .submit.btn {
   display: block;
   border: none !important;
   padding: 10px 20px 10px 20px !important;
   margin-top: 20px !important;
 }
 
+.results {
+  padding: 50px;
+  position: absolute;
+  width: 40%;
+  border-radius: 60px 0px 0px 60px;
+  display: block;
+  left: 100%;
+  /* moves to 60% onclick */
+  color: white;
+  background: #3d3d3d;
+  transition: all .3s linear;
+}
+
 /*=== BEGIN GLOBAL MEDIA QUERIES ===*/
 /* Smallest devices (phone, 768px and below) */
 @media (max-width: 768px) {
-  form.county-select > input {
+  aside, .system.row {
+    transition: all .3s linear;
+    z-index: 5;
+  }
+
+  form.county-select {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  form.county-select:last-child {
+    margin-right: 0;
+  }
+
+  form.county-select > .submit.btn {
     width: 100%;
     text-align: center;
+  }
+
+  .results {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    padding: 40px;
+    margin-top: 0px;
+    left: 0%;
+    border-radius: 0px 0px 20px 20px;
+    transition: display .3s linear;
   }
 }
 /* Small devices (tablets, 768px to 992px) */
@@ -5133,7 +5179,7 @@ form.county-select > input {
   margin-right: 0;
 }
 
-.treatment.row .col-span-8 dl span.icon {
+dl img {
   display: inline-block;
   float: left;
   margin-right: 20px;
@@ -5142,20 +5188,25 @@ form.county-select > input {
   background-size: cover;
 }
 
-span.icon#therapy {
-  background-image: url(/images/icon-therapy.svg);
+dt {
+  font-size: 1.25em;
+  text-transform: uppercase;
+  color: #ff6138;
+  padding-left: 53.33333px;
+  margin-top: 80px;
+  margin-left: 200px;
+  border-left: solid 2px #79bd8f;
 }
 
-span.icon#medmgt {
-  background-image: url(/images/icon-medmgt.svg);
-}
-
-span.icon#psr {
-  background-image: url(/images/icon-psr.svg);
-}
-
-span.icon#actt {
-  background-image: url(/images/icon-actt.svg);
+dd {
+  display: block;
+  color: #a3a3a3;
+  padding-left: 53.33333px;
+  font-size: 1.5em;
+  margin-left: 200px;
+  margin-bottom: 80px;
+  font-family: "Alegreya", serif;
+  border-left: solid 2px #79bd8f;
 }
 
 .treatment.row aside, .treatment.row .system.row {
@@ -5236,27 +5287,56 @@ aside ul li a:hover:hover, .system.row ul li a:hover:hover, aside ul li a:hover:
 }
 
 /*=== BEGIN GLOBAL MEDIA QUERIES ===*/
+/* Even smaller devices! (phones 475px and below) */
+@media (max-width: 475px) {
+  dl img {
+    padding: 0px 50px 0px 50px;
+    height: 100%;
+    width: 100%;
+  }
+}
+/* Between the two... (phones between 475px and 768px) */
+@media (min-width: 475px) and (max-width: 768px) {
+  dl img {
+    height: 30%;
+    width: 30%;
+  }
+}
 /* Smallest devices (phone, 768px and below) */
 @media (max-width: 768px) {
   .treatment.row .col-span-8 {
+    text-align: left;
+  }
+
+  dl img {
+    margin-top: 40px;
+  }
+
+  dd,
+  dt {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 100%;
+    padding-left: 0px;
+    margin-left: 0px;
+    border-left: 0px;
   }
-  .treatment.row .col-span-8:last-child {
+  dd:last-child,
+  dt:last-child {
     margin-right: 0;
   }
 
-  .treatment.row aside, .treatment.row .system.row {
-    float: left;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%;
+  dt {
+    margin-top: 20px;
+    border-top: solid 2px #79bd8f;
+    padding-top: 20px;
   }
-  .treatment.row aside:last-child, .treatment.row .system.row:last-child {
-    margin-right: 0;
+
+  dd {
+    font-size: 17px;
+    line-height: 150%;
+    margin-bottom: 0px;
   }
 }
 /* Small devices (tablets, 768px to 992px) */
@@ -5344,6 +5424,7 @@ footer .secondary {
 body {
   font-family: "Nunito", sans-serif;
   color: #3d3d3d;
+  overflow-x: hidden;
 }
 
 .container-full {
@@ -5401,27 +5482,6 @@ p.subtitle {
   border-top: 1px solid;
   text-transform: uppercase;
   color: #707070;
-}
-
-dt {
-  font-size: 1.25em;
-  text-transform: uppercase;
-  color: #ff6138;
-  padding-left: 53.33333px;
-  margin-top: 80px;
-  margin-left: 200px;
-  border-left: solid 2px #79bd8f;
-}
-
-dd {
-  display: block;
-  color: #a3a3a3;
-  padding-left: 53.33333px;
-  font-size: 1.5em;
-  margin-left: 200px;
-  margin-bottom: 80px;
-  font-family: "Alegreya", serif;
-  border-left: solid 2px #79bd8f;
 }
 
 .btn {

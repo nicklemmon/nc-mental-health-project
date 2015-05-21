@@ -33,12 +33,14 @@ commented out for PrePros*/
 body {
     font-family: $primaryFontStack;
     color: $darkGray;
+    overflow-x:   hidden;
 }
 
 .container-full { /* sets a new container which spans the entire body */
     margin: 0 auto;
     margin-top: -20px; /* fixes alignment with navbar */
     width: 100%;
+    
 }
 
 .row {
@@ -83,30 +85,6 @@ p.subtitle {
     color:          lighten($darkGray, 20%);
 }
 
-dl {
-    
-}
-
-    dt {
-        font-size:      1.25em;
-        text-transform: uppercase;
-        color:          $outrageousOrange;
-        padding-left:   $defaultMargin/1.5;
-        margin-top:     $defaultMargin;
-        margin-left:    $defaultPadding*2;
-        border-left:    solid 2px $deYork;
-    }
-
-    dd {
-        display:        block;
-        color:          lighten($darkGray, 40%);
-        padding-left:   $defaultMargin/1.5;
-        font-size:      1.5em;
-        margin-left:    $defaultPadding*2;
-        margin-bottom:  $defaultMargin;
-        font-family:    $secondaryFontStack;
-        border-left:    solid 2px $deYork;
-    }
 
 ul {
     

@@ -7,28 +7,37 @@
         @include span-columns(12);
     }
 
-        .treatment.row .col-span-8 dl span.icon {
-            display:            inline-block;
-            float:              left;
-            margin-right:       20px;
-            @include size(150px);
-            background-size:    cover;
+        dl {
+    
         }
-
-            span.icon#therapy {
-                background-image:     url(/images/icon-therapy.svg);
+            
+            dl img {
+                display:            inline-block;
+                float:              left;
+                margin-right:       20px;
+                @include size(150px);
+                background-size:    cover;
             }
 
-            span.icon#medmgt {
-                background-image:     url(/images/icon-medmgt.svg);
+            dt {
+                font-size:      1.25em;
+                text-transform: uppercase;
+                color:          $outrageousOrange;
+                padding-left:   $defaultMargin/1.5;
+                margin-top:     $defaultMargin;
+                margin-left:    $defaultPadding*2;
+                border-left:    solid 2px $deYork;
             }
 
-            span.icon#psr {
-                background-image:     url(/images/icon-psr.svg);
-            }
-
-            span.icon#actt {
-                background-image:     url(/images/icon-actt.svg);
+            dd {
+                display:        block;
+                color:          lighten($darkGray, 40%);
+                padding-left:   $defaultMargin/1.5;
+                font-size:      1.5em;
+                margin-left:    $defaultPadding*2;
+                margin-bottom:  $defaultMargin;
+                font-family:    $secondaryFontStack;
+                border-left:    solid 2px $deYork;
             }
 
     .treatment.row aside {
@@ -70,23 +79,65 @@
 
 /*=== BEGIN GLOBAL MEDIA QUERIES ===*/
 
+/* Even smaller devices! (phones 475px and below) */
+@media (max-width: 475px) {
+    
+    dl img {
+        padding:        0px $defaultPadding/2 0px $defaultPadding/2; 
+        @include size(100%);
+    }
+    
+}
+
+/* Between the two... (phones between 475px and 768px) */
+@media (min-width: 475px) and (max-width: 768px) {
+    
+     dl img {
+        @include size(30%);
+    }
+    
+}
+
 /* Smallest devices (phone, 768px and below) */
 @media (max-width: 768px) {
     
     .treatment.row .col-span-8 {
-        @include span-columns(12);
+        text-align:     left;
     }
     
-    .treatment.row aside {
-        float:      left;
-        @include span-columns(12);
+    h4 {
+        
     }
     
+    dl img {
+        margin-top:     $defaultMargin/2;
+    }
+    
+    dd,
+    dt {
+        @include span-columns(12);
+        padding-left:   0px;
+        margin-left:    0px;
+        border-left:    0px;
+    }
+    
+    dt {
+        margin-top:     20px;
+        border-top:     solid 2px $deYork;
+        padding-top:    20px;
+    }
+    
+    dd {
+        font-size:      17px;
+        line-height:    150%;
+        margin-bottom:  0px;
+    }
 }
 
 /* Small devices (tablets, 768px to 992px) */ 
 @media (min-width: 768px) and (max-width: 992px) {
 
+    
  
 }
 

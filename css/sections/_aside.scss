@@ -34,6 +34,7 @@ aside {
     }
 
     form.county-select {
+        @include span-columns(7);
         font-size:          1.2em;
     }
 
@@ -47,21 +48,53 @@ aside {
             width:          100%;
         }
 
-        form.county-select > input {
+        form.county-select > .submit.btn {
             display:        block;
             border:         none !important;
             padding:        10px 20px 10px 20px !important;
             margin-top:     $defaultMargin/4 !important;
         }
 
+    .results {
+        padding:            $defaultPadding/2;
+        position:           absolute;
+        width:              40%;
+        border-radius:      60px 0px 0px 60px;
+        display:            block;
+        left:               100%; /* moves to 60% onclick */
+        color:              white;
+        background:         $darkGray;
+        transition:         all .3s linear;
+    }
+
 /*=== BEGIN GLOBAL MEDIA QUERIES ===*/
 
 /* Smallest devices (phone, 768px and below) */
 @media (max-width: 768px) {
     
-     form.county-select > input {
-        width:      100%;
-        text-align: center;
+    aside {
+        transition:         all .3s linear;
+        z-index:            5;
+    }
+    
+        form.county-select {
+            @include span-columns(12);
+        }
+
+        form.county-select > .submit.btn {
+            width:      100%;
+            text-align: center;
+        }
+    
+    .results {
+        position:           absolute;
+        z-index:            -1;
+        width:              100%;
+        padding:            40px;
+        margin-top:         0px;
+        left:               0%;
+        border-radius:      0px 0px 20px 20px;
+        transition:         display .3s linear;
     }
     
 }
