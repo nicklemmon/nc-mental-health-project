@@ -52,6 +52,7 @@
 
     .scroll-down {
         @include animation(bounce 1.5s 2);
+        @include wobble-vertical();
         display: block;
         margin-top: $defaultPadding/2;
         margin-left: auto;
@@ -64,7 +65,7 @@
     }
 
         .scroll-down:hover {
-            
+            @extend .scroll-down;
         }
 
         
