@@ -4,6 +4,25 @@
     @extend aside;
 }
 
+    .system img { /* centers, encircles, and adds white backdrop to images */
+        display:        block;
+        background:     white;
+        border-radius:  50%;
+        padding:        20px;
+        @include size(300px);
+        margin-left:    auto;
+        margin-right:   auto;
+        margin-bottom:  20px;
+    }
+
+    .system p {
+        color:          white !important;
+    }
+
+    .system a {
+        border-bottom:  1px dotted white;
+    }
+
 
 /*=== BEGIN SYSTEM ROW MEDIA QUERIES ===*/
 
@@ -15,6 +34,15 @@
 /* Small devices (tablets, 768px to 992px) */ 
 @media (min-width: 768px) and (max-width: 992px) {
 
+}
+
+/* Medium devices and up (greater than 992px!) */
+@media (min-width: 992px) {
+    
+    .system img {
+        float:      right;
+    }
+    
 }
 
 /* Medium devices (desktops, 992px and up) */

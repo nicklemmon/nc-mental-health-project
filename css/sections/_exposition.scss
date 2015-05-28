@@ -8,25 +8,12 @@
         @include span-columns(4);
         text-align:     center;
     }
-
-        /*= SVG Icons - svgicons.sparkk.fr =*/
-        .svg-icon {
-            @include size(200px);
-        }
-
-            .svg-icon path {
-                @include size(150px);
-            }
-
-        .svg-icon path,
-        .svg-icon polygon,
-        .svg-icon rect {
-            fill:       $outrageousOrange;
-        }
-
-        .svg-icon circle {
-            stroke:         #4691f6;
-            stroke-width:   1;
+    
+        .exposition img {
+            display:            inline-block;
+            margin-bottom:       20px;
+            @include size(150px);
+            background-size:    cover;
         }
 
         .exposition.row p {
@@ -52,6 +39,7 @@
     .exposition.row .col-sm-4 {
         text-align: center;
         @include span-columns(12);
+        margin-bottom: $defaultMargin/2;
     }
    
 }

@@ -7,6 +7,7 @@
 
     .bio.row img {
         @include span-columns(3);
+        @include size(200px);
     }
 
     .bio.row .col-span-9 {
@@ -29,7 +30,8 @@
     .bio.row img {
         @include span-columns(12);
         display:    block;
-        margin-bottom:  $defaultMargin/2;
+        @include size(300px);
+        margin-bottom:     $defaultMargin/2;
     }
     
     .bio.row .col-span-9 {

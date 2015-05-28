@@ -16,7 +16,6 @@
                 float:              left;
                 margin-right:       20px;
                 @include size(150px);
-                background-size:    cover;
             }
 
             dt {
@@ -123,8 +122,9 @@
     
     dt {
         margin-top:     20px;
-        border-top:     solid 2px $deYork;
-        padding-top:    20px;
+        margin-bottom:  20px;
+        border-top:     solid 1px $deYork;
+        padding-top:    10px;
     }
     
     dd {
