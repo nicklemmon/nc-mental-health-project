@@ -1,10 +1,10 @@
 $( document ).ready(function() {
 
     $(".submit").click(function() { /* moves .results from the right after the user selects their county of residence */
-        //$(".results").css('width', '100%');
-        $(".wrapper").css("position", "absolute");
-        $(".wrapper").css("left", "-100%");
-        $(".results").height($(".wrapper").height());
+        
+        $(".wrapper").css("position", "relative");
+        $(".wrapper").animate({left: "-100%"}, 100);
+        $(".results").height($(".pick-a-county").height());
         
     });
     

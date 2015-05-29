@@ -7,6 +7,7 @@
     .exposition.row .col-sm-4 {
         @include span-columns(4);
         text-align:     center;
+        @include clearfix();
     }
     
         .exposition img {
