@@ -1,8 +1,11 @@
 $( document ).ready(function() {
 
     $(".submit").click(function() { /* moves .results from the right after the user selects their county of residence */
-        $(".results").css('left', '60%');
-        $(".results").show();
+        //$(".results").css('width', '100%');
+        $(".wrapper").css("position", "absolute");
+        $(".wrapper").css("left", "-100%");
+        $(".results").height($(".wrapper").height());
+        
     });
     
     $(window).resize(function() {

@@ -34,7 +34,7 @@ aside {
     }
 
     form.county-select {
-        @include span-columns(7);
+        width:              100%;
         font-size:          1.2em;
     }
 
@@ -56,16 +56,28 @@ aside {
             margin-top:     $defaultMargin/4 !important;
         }
 
+    .county.wrapper {
+        display:            block;
+        width:              200%;
+        @include clearfix();
+        transition:         all 3s linear;
+    }
+
+    .pick-a-county {
+        width:              50%;
+        float:              left;
+    }
+
     .results {
         padding:            $defaultPadding/2;
-        position:           absolute;
-        width:              40%;
-        border-radius:      60px 0px 0px 60px;
+        position:           relative;
+        width:              50%;
         display:            block;
-        left:               100%; /* moves to 60% onclick */
+        float:              left;
+        left:               0%; /* moves to 0% onclick */
         color:              white;
         background:         $darkGray;
-        transition:         all .3s linear;
+        transition:         all 3s linear;
     }
 
 /*=== BEGIN GLOBAL MEDIA QUERIES ===*/
