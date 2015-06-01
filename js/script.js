@@ -2,32 +2,19 @@ $( document ).ready(function() {
 
     $(".submit").click(function() { /* moves .results from the right after the user selects their county of residence */
         
-        $(".wrapper").css("position", "relative");
-        $(".wrapper").animate({left: "-100%"}, 100);
-        $(".results").height($(".pick-a-county").height());
+        $(".results").css("position", "relative");
+        $(".results").animate({left: "-50%"}, { duration: 800, easing: "easeOutCubic" });
+        // USE JQUERY TO ADD A CLASS USING CSS ANIMATIONS TO GIVE BOUNCE
+        //$(".results").height($(".pick-a-county").height());
+        //$(".pick-a-county").css("display", "hidden");
         
     });
     
-    $(window).resize(function() {
+    $(".back").click(function() {
         
-        if( $(this).width() < 768 ) { /* if the browser/device width is less than 768px, then change the animation of .results when the user selects their county of residence */
-
-            $(".submit").click(function() {
-                $(".results").css('margin-top', '180px');
-                $(".results").show();
-            });
-
-        };
-
-        /*else {
-
-            $(".submit").click(function() {
-                $(".results").css('left', '60%');
-                $(".results").show();   
-            });
-
-        };*/
-
+        $(".results").animate({left: "0%"}, 100, "swing");
+        $(".pick-a-county").css("display", "inherit");
+        
     });
     
     $('a[href*=#]:not([href=#])').click(function() { /* smooth scrolling function from https://css-tricks.com/snippets/jquery/smooth-scrolling/ */
