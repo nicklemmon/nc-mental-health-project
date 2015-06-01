@@ -120,6 +120,7 @@ aside {
 
         .results .btn {
             display:    block;
+            cursor:     pointer;
             @extend .submit;
         }
 

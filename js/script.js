@@ -12,7 +12,7 @@ $( document ).ready(function() {
     
     $(".back").click(function() {
         
-        $(".results").animate({left: "0%"}, 100, "swing");
+        $(".results").animate({left: "0%"}, { duration: 600, easing: "easeOutCubic" });
         $(".pick-a-county").css("display", "inherit");
         
     });
