@@ -114,19 +114,44 @@ aside {
         background:         $darkGray;
     }
 
+        .results img {
+            float:              right;
+            display:        block;
+            background:     white;
+            border-radius:  50%;
+            padding:        20px;
+            @include size(200px);
+            margin-left:    auto;
+            margin-right:   auto;
+        }
+
         .results a {
-            display:    block;
+            font-size:          1.2em;
+            display:            block;
+            transition:         all .3s;
+        }
+
+            .results a.website,
+            .results a.phone {
+                display:        block;
+                color:          $caper;
+            }
+                
+                .results a.website:hover,
+                .results a.phone:hover {
+                    color:      darken($caper, 10%);
+                    transition: all .3s;
+                }
+
+        .results h3,
+        .results p {
+            text-shadow:        none !important;
         }
 
         .results .btn {
-            display:    block;
+            display:    inline-block;
             cursor:     pointer;
-            @extend .submit;
         }
-
-            .results .btn:hover { /* fixes weird glitch with the button re-sizing to the text it contains */
-                width: 100%;
-            }
 
 
 /*=== BEGIN GLOBAL MEDIA QUERIES ===*/
@@ -136,7 +161,6 @@ aside {
     
     aside {
         transition:         all .3s linear;
-        z-index:            5;
     }
     
         form.county-select {
@@ -149,15 +173,21 @@ aside {
         }
     
     .results {
-        position:           absolute;
-        z-index:            -1;
-        width:              100%;
-        padding:            40px;
-        margin-top:         0px;
-        left:               0%;
-        border-radius:      0px 0px 20px 20px;
-        transition:         display .3s linear;
+        text-align:     center;
     }
+    
+        .results img { /* hides image of mco region for smallest screen sizes */
+            display:    none;
+        }
+        
+        .results .name {
+            margin-bottom:  40px;
+        }
+
+        .results .phone,
+        .results .website {
+            margin-bottom:     20px;
+        }
     
 }
 
