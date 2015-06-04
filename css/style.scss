@@ -82,7 +82,7 @@ p.subtitle {
     padding-top:    .5em;
     border-top:     1px solid;
     text-transform: uppercase;
-    color:          lighten($darkGray, 20%);
+    color:          lighten($darkGray, 40%);
 }
 
 
@@ -110,6 +110,13 @@ ul {
         box-shadow: $defaultBoxShadow;
     }
 
+.left {
+    float:      left;
+}
+
+.right {
+    float:      right;
+}
 
 /*===== HEADER HIERARCHY =====*/
 
@@ -148,7 +155,7 @@ h5 {
 @media (max-width: 768px) {
     
     p {
-        font-size:      17px;
+        font-size:      18px;
         line-height:    150%;
     }
     

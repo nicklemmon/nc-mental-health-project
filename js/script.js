@@ -23,10 +23,10 @@ $( document ).ready(function() {
         $(".pick-a-county").css("display", "inherit");
     });
     
-    $("#county-select").change(function() {
+    $("#county-select").change(function() { /* county and MCO information appended to .results div */
         
         var selectedCounty = $("#county-select :selected").attr("value");
-        $(".name").empty().append("" + selectedCounty + " county");
+        $(".name").empty().append("" + selectedCounty + " County");
         
     });
     

@@ -1,8 +1,7 @@
 /*=== BIO ROW ===*/
 
 .bio.row {
-    background:     $darkGray;
-    color:          white !important;
+    
 }
 
     .bio.row img {
@@ -13,14 +12,6 @@
     .bio.row .col-span-9 {
         @include span-columns(9);
     }
-
-        .bio.row p {
-            color:      white;
-        }
-
-        .bio.row p.subtitle {
-            color:      lighten($darkGray, 20%);
-        }
 
 /*=== BEGIN GLOBAL MEDIA QUERIES ===*/
 

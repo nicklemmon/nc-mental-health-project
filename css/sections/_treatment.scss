@@ -3,6 +3,7 @@
 .treatment.row {
     
 }
+
     .treatment.row .col-span-8 {
         @include span-columns(12);
     }

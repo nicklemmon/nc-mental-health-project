@@ -1,7 +1,7 @@
 /*=== SYSTEM ROW ===*/
 
 .system.row {
-    @extend aside;
+    background:     $darkGray;
 }
 
     .system img { /* centers, encircles, and adds white backdrop to images */
@@ -15,12 +15,18 @@
         margin-bottom:  20px;
     }
 
+    .system p,
+    .system h2,
+    .system h3 {
+        color:          white;
+    }
+
     .system p {
-        color:          white !important;
+        text-align:     justify;
     }
 
     .system a {
-        border-bottom:  1px dotted white;
+        color:          $outrageousOrange;
     }
 
 
@@ -29,10 +35,28 @@
 /* Smallest devices (phone, 768px and below) */
 @media (max-width: 768px) {
     
+    .system p {
+        text-align: left;
+    }
+    
+    .system img {
+        float:      none;
+        @include size(240px);
+        //margin:     $defaultMargin/4;
+    }
 }
 
 /* Small devices (tablets, 768px to 992px) */ 
 @media (min-width: 768px) and (max-width: 992px) {
+    
+    .system p {
+        text-align: left;
+    }
+    
+    .system img {
+        float:      right !important; /* overrides float behavior for both img elements */
+        margin:     $defaultMargin/2;
+    }
 
 }
 
@@ -40,7 +64,6 @@
 @media (min-width: 992px) {
     
     .system img {
-        float:      right;
         margin:     $defaultMargin/2;
     }
     
