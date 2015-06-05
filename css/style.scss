@@ -36,6 +36,10 @@ body {
     overflow-x:   hidden;
 }
 
+::selection {
+    background:     $paleCanary;
+}
+
 .container-full { /* sets a new container which spans the entire body */
     margin: 0 auto;
     margin-top: -20px; /* fixes alignment with navbar */
@@ -55,13 +59,6 @@ body {
         @include outer-container; /* sets .row span as container for Neat grid */
     }
 
-a {
-    
-}
-
-    a:hover {
-        text-decoration: none;
-    }
 
 p { /* paragraph styles */
     font-family:    $secondaryFontStack;
@@ -75,40 +72,83 @@ p { /* paragraph styles */
         font-size: 20px;
     }
 
-p.subtitle {
-    margin-top:     0px; /* makes margin different from typical paragraphs */
-    font-size:      1.25em;
-    font-weight:    300;
-    padding-top:    .5em;
-    border-top:     1px solid;
-    text-transform: uppercase;
-    color:          lighten($darkGray, 40%);
+    p.subtitle {
+        margin-top:     0px; /* makes margin different from typical paragraphs */
+        font-size:      1.25em;
+        font-weight:    300;
+        padding-top:    .5em;
+        border-top:     1px solid;
+        text-transform: uppercase;
+        color:          lighten($darkGray, 40%);
+    }
+
+    p.caution {
+        border-left:    3px solid $outrageousOrange;
+        padding:        10px 0px 10px 20px;
+        margin-left:    -10px;
+        font-style:     italic;
+    }
+
+    p a,
+    ul a {
+    color:      $persianGreen;
+    transition: all .3s ease;
 }
 
+    p a:hover,
+    ul a:hover {
+        color:              darken($persianGreen, 10%);
+        text-decoration:    none;
+        transition: all .3s ease;
+    }
 
-ul {
-    
-} 
+        a:hover {
+            text-decoration:    none;
+        }
+
+    p a:visited,
+    ul a:visited {
+        text-decoration:    underline !important;
+    }
+
+    p a:active,
+    ul a:active {
+        color:              $deYork;
+    }
+
+
+.content ul {
+    font-size:      1.25em;
+    margin-left:    0px;
+}
+
+    .content ul li {
+        display:    inline-block;
+        @include span-columns(6);
+    }
 
 .btn {
     display:            inline-block;
     text-transform:     uppercase;
     border-radius:      20px;
     line-height:        20px;
+    border:             none;
     margin-top:         $defaultMargin;
     padding:            10px 20px 10px 20px;
-    @include bounce-out();
+    transition:         all .3s ease;
 }
     .btn:hover {
-        @include grow();
-        transition: all .5s;
+        transition: all .3s ease;
     }
 
-    .btn.btn-primary {
+    .btn.btn-default {
         background: $deYork;
         border:     1px solid $deYork;
-        box-shadow: $defaultBoxShadow;
     }
+
+        .btn.btn-default:hover {
+            background: darken($deYork, 10%);
+        }
 
 .left {
     float:      left;
@@ -160,8 +200,14 @@ h5 {
     }
     
         p.subtitle {
-            margin-top: 20px;
+            font-size:  16px;
+            margin-top: 16px;
         }
+    
+    .content ul li {
+        margin-bottom:  20px;
+        @include span-columns(12);
+    }
     
     h2 {
         font-size:      2em;
@@ -202,9 +248,16 @@ h5 {
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1200px) {
     
+    p.caution {
+        border-left:    5px solid $outrageousOrange;
+    }
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
+    
+    p.caution {
+        border-left:    5px solid $outrageousOrange;
+    }
     
 }

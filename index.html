@@ -97,27 +97,27 @@
                     <img src="/images/icon-system.svg" alt="system icon" height="100%" width="100%">
                     <h3>What does the system look like?</h3>
                     <p>North Carolina offers services which are largely privatized and decentralized, all managed by several managed care organizations. The system is complex, so read on to learn more about how it looks from the ground.</p>
-                    <a class="btn btn-default" href="#system">Learn more, bro</a>
+                    <a class="btn btn-default" href="#system">Learn more</a>
                 </div> <!-- end .col-sm-4 -->
                 
                 <div class="col-sm-4">
                     <img src="/images/icon-question.svg" alt="question icon" height="100%" width="100%" /> 
                     <h3>What is mental health treatment?</h3>
                     <p>Before you start looking for services, it's important to know what to ask for. Read on to learn what treatment looks like for a typical client in the system.</p>
-                    <a class="btn btn-default" href="#">Learn more, bro</a>
+                    <a class="btn btn-default" href="#treatment">Learn more</a>
                 </div> <!-- end .col-sm-4 -->
                 
                 <div class="col-sm-4">
                     <img src="/images/icon-connect.svg" alt="system icon" height="100%" width="100%">
                     <h3>How does someone connect with mental health treatment?</h3>
                     <p>Unfortunately, connecting with care can be complicated without some prior knowledge. Though families often need care before they develop exerptise, read more to find a good starting point.</p>
-                    <a class="btn btn-default" href="#">Learn more, bro</a>
+                    <a class="btn btn-default" href="#system">Learn more</a>
                 </div> <!-- end .col-sm-4 -->
             
             </span></section> <!-- end .exposition .row -->
             
             <!--======== BEGIN ASIDE ROW ========-->
-            <aside class="county wrapper"><span>
+            <aside class="county wrapper" id="aside"><span>
                 
                 <div class="pick-a-county row"><span>
                     <h2>Connect with care&nbsp;now</h2>
@@ -243,7 +243,7 @@
             </span></aside> <!-- end aside .county.row -->
             
             <!--======== BEGIN TREATMENT ========-->
-            <section class="treatment row"><span>
+            <section class="treatment row" id="treatment"><span>
                 
                 <div class="col-span-8">
                     <h2>What is mental health treatment?</h2>
@@ -252,17 +252,17 @@
                     <dl>
                         <img src="/images/icon-therapy.svg" alt="therapy icon" height="100%" width="100%" />
                         <!--<span class="icon" id="therapy"></span>-->
-                        <dt>Outpatient therapy</dt>
+                        <dt id="outpatient-therapy">Outpatient therapy</dt>
                             <dd>Traditional talk therapy in an office-based setting. Therapy is an effective tool for helping clients build the skills needed to manage independently on a day-to-day basis. There is state-funding to pay for this service for uninsured residents of North Carolina, but the number of sessions is limited.</dd>
                         <img src="/images/icon-medmgt.svg" alt="medication icon" height="100%" width="100%" />
-                        <dt>Outpatient medication management</dt>
+                        <dt id="outpatient-med-mgt">Outpatient medication management</dt>
                             <dd>Typically the role of psychiatry, medication management often complements other services through the prescription of medication. Medication offers symptom relief which can help promote stability, and ideally, recovery. There is also state funding for this service for uninsured residents, though sessions tend to be brief and with loq frequency.</dd>
                         <img src="/images/icon-psr.svg" alt="PSR icon" height="100%" width="100%" />
-                        <dt>Psychosocial rehabilitation</dt>
+                        <dt id="psr">Psychosocial rehabilitation</dt>
                             <dd>PSR for short, these programs offer a form of social structure through a local clubhouse model. Typically these programs are reserved for individuals with serious mental illness, PSR offers a community-based alternative for individuals who may have previously been institutionalized.</dd>
                         
                         <img src="/images/icon-actt.svg" alt="ACTT icon" height="100%" width="100%" />
-                        <dt>Assertive Community Treatment Team (ACTT)</dt>
+                        <dt id="actt">Assertive Community Treatment Team (ACTT)</dt>
                             <dd>ACTT is the highest level of community-based care and typically reserved for clients with serious mental illness and resulting functional impairments. These teams are made up of social workers, psychiatrists, nurses, and other qualified professionals who help clients maintain stability by providing wraparound services.</dd>
                     </dl> <!-- end <dl> -->
                 </div> <!-- end .col-span-8 -->
@@ -270,7 +270,7 @@
             </span></section> <!-- end .treatment .row -->
             
             <!--======== BEGIN SYSTEM ========-->
-            <section class="system row"><span>
+            <section class="system row" id="system"><span>
                 
                 <h2>What does the system look like?</h2>
                 <p class="subtitle">Learn the lay of the land</p>
@@ -294,7 +294,7 @@
             </span></section> <!-- end .system .row -->
             
             <!--======== BEGIN MEDICARE-PRIVATE ========-->
-            <section class="medicare-private row"><span>
+            <section class="medicare-private row" id="medicare-private"><span>
                 
                 <h2>What about Medicare or private insurance?</h2>
                 <p class="subtitle">Different funding with different options</p>
@@ -303,20 +303,23 @@
                     <h3>Medicare</h3>
                     <p>If you have Medicare Part A, you already use your insurance to see doctors at outpatient clinics for primary care and other specialties. Mental health treatment works the same way; with outpatient coverage you can search for providers <a href="http://www.medicare.gov/physiciancompare/search.html">through Medicare.gov</a>.</p>
                     <p>Be prepared! Typically Medicare requires co-payments for outpatient appointments, so call ahead before the first appointment to find out about out-of-pocket costs.</p>
+                    <p class="caution">Unfortunately, Medicare does not pay for enhanced services such as <a href="#actt">ACTT</a> or <a href="#psr">PSR</a>. If these services are needed, <a href="#aside">contact your local Managed Care Organization (MCO)</a> and ask about state-funded enhanced services.</p>
                 </div> <!-- end .medicare -->
                 
                 <div class="private">
                     <h3>Private insurance</h3>
-                    <img src="" alt="Where to find the phone number for your insurance company" />
                     <p>With private insurance, patients can choose from a larger variety of providers. With all the flexibility comes a lot of complexity. As a result, this site can't offer specific guidance as far as how to connect with care for every individual as there are many private insurance companies out there.</p>
+                    <img src="" alt="Where to find the phone number for your insurance company" />
                     <p>Typically, a phone number or website for your insurance company can be found on the back of your insurance card.</p>
+                    <p class="caution">Like Medicare, most private insurers do not pay for enhanced services such as <a href="#actt">ACTT</a> or <a href="#psr">PSR</a>.</p>
                 </div> <!-- end .private -->
                 
                 <div class="search">
                     <h3>Searching for care online</h3>
-                    <p>Whether you're looking <a href="http://www.medicare.gov/physiciancompare/search.html">via Medicare.gov</a> or your private insurer, here are a few quick tips:</p>
+                    <p>Whether you're looking <a href="http://www.medicare.gov/physiciancompare/search.html">via Medicare.gov</a> or your private insurer, here are a few quick tips to help your search:</p>
                     <ul>
                         <li>If you are looking for <a href="#">medication management</a>, try searching for psychiatrists or psychiatric nurse practitioners</li>
+                        <li>If you are looking for <a href="#">outpatient therapy</a>, try searching for licensed clinical social workers (LCSWs), licensed practicing counselors (LPCs), licensed marriage and family therapists (LMFTs), and psychologists</li>
                     </ul>
                 </div> <!-- end .search -->
                 

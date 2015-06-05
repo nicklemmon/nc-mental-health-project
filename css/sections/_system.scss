@@ -29,6 +29,10 @@
         color:          $outrageousOrange;
     }
 
+        .system a:hover {
+            color:      darken($outrageousOrange, 10%);
+        }
+
 
 /*=== BEGIN SYSTEM ROW MEDIA QUERIES ===*/
 

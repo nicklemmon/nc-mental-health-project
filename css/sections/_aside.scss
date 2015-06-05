@@ -32,7 +32,13 @@ aside {
     aside .btn {
         color:          white;
         background:     $caper;
+        transition: all .3s ease;
     }
+
+        aside .btn:hover {
+            background: darken($caper, 5%);
+            transition: all .3s ease;
+        }
 
     form.county-select {
         width:              100%;
@@ -44,17 +50,29 @@ aside {
         }
 
         form.county-select > select {
+            display:        block;
+            @include span-columns(8);
             font-family:    $secondaryFontStack;
             font-weight:    700;
-            width:          100%;
         }
+
+            form.county-select > select:focus { /* styling highlighting the select drop-down */
+                box-shadow: 0 0 5px $caper;
+                  border: 1px solid $caper;
+                outline-color: rgba(0,0,0,0);
+                outline-offset: 0px;
+                outline-style: auto;
+                outline-width: 5px;
+            }
 
         form.county-select > .submit.btn {
             display:        block;
+            text-align:     center;
+            max-width:      120px;
             cursor:         pointer;
             border:         none !important;
             padding:        10px 20px 10px 20px !important;
-            margin-top:     $defaultMargin/4 !important;
+            margin-top:     $defaultMargin/2 !important;
         }
 
     .county.wrapper {
@@ -114,9 +132,16 @@ aside {
         }
 
         .results .btn {
-            display:    inline-block;
-            cursor:     pointer;
+            display:        inline-block;
+            cursor:         pointer;
+            background:     $outrageousOrange;
+            text-shadow:    none;
+            transition:     all .3s ease;
         }
+
+            .results .btn:hover {
+                background: darken($outrageousOrange, 5%);
+            }
 
 
 /*=== BEGIN GLOBAL MEDIA QUERIES ===*/
@@ -131,11 +156,15 @@ aside {
         form.county-select {
             @include span-columns(12);
         }
+    
+            form.county-select > select {
+                @include span-columns(12);
+            }
 
-        form.county-select > .submit.btn {
-            width:      100%;
-            text-align: center;
-        }
+            form.county-select > .submit.btn {
+                width:      100%;
+                text-align: center;
+            }
     
     .results {
         text-align:     center;
