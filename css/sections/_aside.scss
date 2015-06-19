@@ -20,25 +20,13 @@ aside {
     }
 
     aside label {
+        display:        block;
         font-family:    $secondaryFontStack;
         color:          white;
         text-shadow:    1px 1px $persianGreen;
         margin-top:     $defaultMargin/4;
     }
 
-    aside select {
-    }
-
-    aside .btn {
-        color:          white;
-        background:     $caper;
-        transition: all .3s ease;
-    }
-
-        aside .btn:hover {
-            background: darken($caper, 5%);
-            transition: all .3s ease;
-        }
 
     form.county-select {
         width:              100%;
@@ -51,7 +39,7 @@ aside {
 
         form.county-select > select {
             display:        block;
-            @include span-columns(8);
+            @include span-columns(12);
             font-family:    $secondaryFontStack;
             font-weight:    700;
         }
@@ -70,10 +58,18 @@ aside {
             text-align:     center;
             max-width:      120px;
             cursor:         pointer;
+            color:          white;
+            background:     $caper;
+            transition:     all .3s ease;
             border:         none !important;
-            padding:        10px 20px 10px 20px !important;
-            margin-top:     $defaultMargin/2 !important;
+            padding:        10px 20px 10px 20px;
+            margin-top:     50px !important;
         }
+
+            form.county-select > .submit.btn:hover {
+                background: darken($caper, 5%);
+                transition: all .3s ease;
+            }
 
     .county.wrapper {
         display:            block;
@@ -162,8 +158,8 @@ aside {
             }
 
             form.county-select > .submit.btn {
-                width:      100%;
-                text-align: center;
+                display:    block;
+                max-width:      100%;
             }
     
     .results {

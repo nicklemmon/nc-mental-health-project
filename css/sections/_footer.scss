@@ -2,8 +2,25 @@
 /*===== FOOTER STYLES =====*/
 
 footer {
-
+    color:  white;
 }
+
+    footer .col-span-4 {
+        @include span-columns(4);
+    }
+
+        footer a,
+        footer h5 {
+            color:  white;
+        }
+
+        footer ul {
+            
+        }
+
+            footer ul li {
+                list-style:     none;
+            }
 
     footer .primary {
         background: darken($darkGray, 5%);
@@ -12,3 +29,62 @@ footer {
     footer .secondary {
         background: darken($darkGray, 10%);
     }
+
+
+
+/*=== BEGIN GLOBAL MEDIA QUERIES ===*/
+
+/* Smallest devices (phone, 768px and below) */
+@media (max-width: 768px) {
+    
+    aside {
+        transition:         all .3s linear;
+    }
+    
+        form.county-select {
+            @include span-columns(12);
+        }
+    
+            form.county-select > select {
+                @include span-columns(12);
+            }
+
+            form.county-select > .submit.btn {
+                display:    block;
+                max-width:      100%;
+            }
+    
+    .results {
+        text-align:     center;
+    }
+    
+        .results img { /* hides image of mco region for smallest screen sizes */
+            display:    none;
+        }
+        
+        .results .name {
+            margin-bottom:  40px;
+        }
+
+        .results .phone,
+        .results .website {
+            margin-bottom:     20px;
+        }
+    
+}
+
+/* Small devices (tablets, 768px to 992px) */ 
+@media (min-width: 768px) and (max-width: 992px) {
+
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1200px) {
+    
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    
+}
