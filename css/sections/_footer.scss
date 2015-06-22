@@ -14,13 +14,45 @@ footer {
             color:  white;
         }
 
+        footer h5 {
+            padding-left:   40px;
+        }
+
+            h5.comment {
+                background:         url(/images/comment.svg) no-repeat;
+                background-size:    25px;
+            }
+
+            h5.tag {
+                background:         url(/images/tag.svg) no-repeat;
+                background-size:    25px;
+            }
+
+            h5.profile {
+                background:         url(/images/profile.svg) no-repeat;
+                background-size:    25px;
+            }
+
         footer ul {
-            
+            margin-top: $defaultMargin/4;
+            border-top: 1px solid rgba(255,255,255,.2);
         }
 
             footer ul li {
                 list-style:     none;
             }
+
+                footer ul li a {
+                    display:        block;
+                    color:          white;
+                    border-bottom:  1px solid rgba(255,255,255,.2);
+                    padding:        10px;
+                }
+
+                    footer ul li a:hover {
+                        color:      rgba(255,255,255,.7);
+                        background: rgba(0,0,0,.2);  
+                    }
 
     footer .primary {
         background: darken($darkGray, 5%);

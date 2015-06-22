@@ -1,7 +1,8 @@
 /*=== BIO ROW ===*/
 
+  
 .bio.row {
-    
+   
 }
 
     .bio.row img {
@@ -34,11 +35,28 @@
 /* Small devices (tablets, 768px to 992px) */ 
 @media (min-width: 768px) and (max-width: 992px) {
 
+    .bio.row img {
+        @include span-columns(4);
+        @include size(150px);
+    }
+    
+    .bio.row .col-span-9 {
+        @include span-columns(8);
+    }
  
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1200px) {
+    
+    .bio.row img {
+        @include span-columns(4);
+        @include size(200px);
+    }
+    
+    .bio.row .col-span-9 {
+        @include span-columns(8);
+    }
     
 }
 
