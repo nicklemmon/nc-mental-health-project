@@ -1,12 +1,16 @@
 .medicare-private img {
     display:        block;
     background:     white;
-    border-radius:  50%;
-    padding:        20px;
-    @include size(300px);
+    @include size(500px 400px);
     margin-left:    auto;
     margin-right:   auto;
-    margin-bottom:  20px;
+    margin-top:     -$defaultMargin/4;
+}
+
+.medicare-private ul li {
+    font-family:    $secondaryFontStack;
+    color:          lighten($darkGray, 40%);
+    font-size:      1.25em;
 }
 
 
@@ -14,9 +18,13 @@
 
 /* Smallest devices (phone, 768px and below) */
 @media (max-width: 768px) {
-    
 
-   
+    .medicare-private img {
+        @include size(100%);
+        margin-top:         40px;
+        margin-bottom:      40px;
+    }
+ 
 }
 
 /* Small devices (tablets, 768px to 992px) */ 
@@ -27,13 +35,11 @@
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1200px) {
     
-    
-    
+      
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
     
-    
-
+  
 }

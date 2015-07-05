@@ -11,6 +11,10 @@
         dl {
     
         }
+
+            .dl-section:hover {
+                background:         lighten($darkGray, 40%);
+            }
             
             dl img {
                 display:            inline-block;

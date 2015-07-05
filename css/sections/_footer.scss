@@ -10,7 +10,8 @@ footer {
     }
 
         footer a,
-        footer h5 {
+        footer h5,
+        footer p {
             color:  white;
         }
 
@@ -31,6 +32,18 @@ footer {
             h5.profile {
                 background:         url(/images/profile.svg) no-repeat;
                 background-size:    25px;
+            }
+        
+        footer p {
+            font-size:      1.5em;
+        }
+
+            footer p#back-to-the-top {
+                float:  left;
+            }
+
+            footer p#legal {
+                float:  right;
             }
 
         footer ul {
@@ -58,8 +71,10 @@ footer {
         background: darken($darkGray, 5%);
     }
 
-    footer .secondary {
-        background: darken($darkGray, 10%);
+    footer .secondary.row {
+        background:     darken($darkGray, 10%);
+        padding-top:    30px;
+        padding-bottom: 10px;
     }
 
 
