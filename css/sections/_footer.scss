@@ -84,39 +84,20 @@ footer {
 /* Smallest devices (phone, 768px and below) */
 @media (max-width: 768px) {
     
-    aside {
-        transition:         all .3s linear;
+    footer .col-span-4 {
+        @include span-columns(12);
     }
     
-        form.county-select {
-            @include span-columns(12);
+        footer h5 {
+            font-size:      1em;
+            padding-top:    20px;
+            background-position: 0% 18px !important;
         }
     
-            form.county-select > select {
-                @include span-columns(12);
-            }
-
-            form.county-select > .submit.btn {
-                display:    block;
-                max-width:      100%;
-            }
-    
-    .results {
-        text-align:     center;
+    footer .secondary.row a,
+    footer .secondary.row p {
+        font-size: 1em;
     }
-    
-        .results img { /* hides image of mco region for smallest screen sizes */
-            display:    none;
-        }
-        
-        .results .name {
-            margin-bottom:  40px;
-        }
-
-        .results .phone,
-        .results .website {
-            margin-bottom:     20px;
-        }
     
 }
 

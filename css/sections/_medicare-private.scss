@@ -24,6 +24,12 @@
         margin-top:         40px;
         margin-bottom:      40px;
     }
+    
+    .medicare-private ul li {
+        font-family:    $secondaryFontStack;
+        color:          lighten($darkGray, 40%);
+        font-size:      1em;
+    }
  
 }
 
