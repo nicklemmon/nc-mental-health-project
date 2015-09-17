@@ -15,6 +15,10 @@ footer {
             color:  white;
         }
 
+        footer a {
+          font-size: 16px;
+        }
+
         footer h5 {
             padding-left:   40px;
         }
@@ -33,7 +37,7 @@ footer {
                 background:         url(/images/profile.svg) no-repeat;
                 background-size:    25px;
             }
-        
+
         footer p {
             font-size:      1.5em;
         }
@@ -64,18 +68,29 @@ footer {
 
                     footer ul li a:hover {
                         color:      rgba(255,255,255,.7);
-                        background: rgba(0,0,0,.2);  
+                        background: rgba(0,0,0,.2);
                     }
 
     footer .primary {
-        background: darken($darkGray, 5%);
+      padding:    $defaultPadding/2;
+      background: darken($darkGray, 5%);
     }
+
+      footer .primary ul li {
+        margin-left: -$defaultMargin/2; /* left aligns lists in footer */
+      }
 
     footer .secondary.row {
         background:     darken($darkGray, 10%);
         padding-top:    30px;
         padding-bottom: 10px;
+        padding-left:   $defaultPadding;
+        padding-right:  $defaultPadding;
     }
+
+      footer .secondary.row a {
+        font-size: 20px;
+      }
 
 
 
@@ -83,25 +98,25 @@ footer {
 
 /* Smallest devices (phone, 768px and below) */
 @media (max-width: 768px) {
-    
+
     footer .col-span-4 {
         @include span-columns(12);
     }
-    
+
         footer h5 {
             font-size:      1em;
             padding-top:    20px;
             background-position: 0% 18px !important;
         }
-    
+
     footer .secondary.row a,
     footer .secondary.row p {
         font-size: 1em;
     }
-    
+
 }
 
-/* Small devices (tablets, 768px to 992px) */ 
+/* Small devices (tablets, 768px to 992px) */
 @media (min-width: 768px) and (max-width: 992px) {
 
 
@@ -109,10 +124,10 @@ footer {
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1200px) {
-    
+
 }
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
-    
+@media (min-width: 1200px) {
+
 }

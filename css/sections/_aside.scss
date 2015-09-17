@@ -3,6 +3,8 @@
 aside {
     @include linear-gradient(darken($deYork, 5%), $deYork);
     @include clearfix();
+    height:             $defaultPadding*5;
+    overflow-y:         hidden;
 }
 
     aside h2,
@@ -46,7 +48,7 @@ aside {
 
             form.county-select > select:focus { /* styling highlighting the select drop-down */
                 box-shadow: 0 0 5px $caper;
-                  border: 1px solid $caper;
+                border: 1px solid $caper;
                 outline-color: rgba(0,0,0,0);
                 outline-offset: 0px;
                 outline-style: auto;
@@ -94,12 +96,12 @@ aside {
     }
 
         .results img {
-            float:              right;
+            float:          right;
             display:        block;
             background:     white;
-            border-radius:  50%;
             padding:        20px;
-            @include size(200px);
+            max-width:      400px;
+            height:         auto;
             margin-left:    auto;
             margin-right:   auto;
         }
@@ -113,9 +115,10 @@ aside {
             .results a.website,
             .results a.phone {
                 display:        block;
+                font-size:      1.5em;
                 color:          $caper;
             }
-                
+
                 .results a.website:hover,
                 .results a.phone:hover {
                     color:      darken($caper, 10%);
@@ -144,15 +147,15 @@ aside {
 
 /* Smallest devices (phone, 768px and below) */
 @media (max-width: 768px) {
-    
+
     aside {
         transition:         all .3s linear;
     }
-    
+
         form.county-select {
             @include span-columns(12);
         }
-    
+
             form.county-select > select {
                 @include span-columns(12);
             }
@@ -161,15 +164,15 @@ aside {
                 display:    block;
                 max-width:      100%;
             }
-    
+
     .results {
         text-align:     center;
     }
-    
+
         .results img { /* hides image of mco region for smallest screen sizes */
             display:    none;
         }
-        
+
         .results .name {
             margin-bottom:  40px;
         }
@@ -178,10 +181,10 @@ aside {
         .results .website {
             margin-bottom:     20px;
         }
-    
+
 }
 
-/* Small devices (tablets, 768px to 992px) */ 
+/* Small devices (tablets, 768px to 992px) */
 @media (min-width: 768px) and (max-width: 992px) {
 
 
@@ -189,10 +192,10 @@ aside {
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1200px) {
-    
+
 }
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
-    
+@media (min-width: 1200px) {
+
 }

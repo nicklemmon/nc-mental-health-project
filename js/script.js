@@ -254,7 +254,7 @@ function countySelect() {
       $website.attr( "href", selectedMco.website );
       $website.empty().append( "" + selectedMco.mcoName + " website" );
       $phone.empty().append( selectedMco.phoneNumber );
-      $map.attr( "src", "/images/" + selectedMco.mcoName + ".jpg" );
+      $map.attr( "src", "/images/" + selectedMco.mcoName + ".png" );
 
   });
 

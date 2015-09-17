@@ -7,11 +7,28 @@
     margin-top:     -$defaultMargin/4;
 }
 
-.medicare-private ul li {
+.medicare-private .search p {
     font-family:    $secondaryFontStack;
     color:          lighten($darkGray, 40%);
-    font-size:      1.25em;
+    font-size:      1.4em;
 }
+
+.medicare-private .search h4 {
+  color:              $outrageousOrange;
+  margin-bottom:      $defaultMargin/8;
+}
+
+.medicare-private .search img {
+  @include size(35%);
+  margin-top:         $defaultMargin/4;
+}
+
+  .search .med-mgt,
+  .search .outpt-therapy {
+    @include span-columns(6);
+    text-align:   center;
+    margin-top:   $defaultMargin/2;
+  }
 
 
 /*=== BEGIN MEDIA QUERIES ===*/
@@ -24,28 +41,28 @@
         margin-top:         40px;
         margin-bottom:      40px;
     }
-    
+
     .medicare-private ul li {
         font-family:    $secondaryFontStack;
         color:          lighten($darkGray, 40%);
         font-size:      1em;
     }
- 
+
 }
 
-/* Small devices (tablets, 768px to 992px) */ 
+/* Small devices (tablets, 768px to 992px) */
 @media (min-width: 768px) and (max-width: 992px) {
 
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1200px) {
-    
-      
+
+
 }
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
-    
-  
+@media (min-width: 1200px) {
+
+
 }

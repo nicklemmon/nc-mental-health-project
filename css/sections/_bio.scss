@@ -1,13 +1,21 @@
 /*=== BIO ROW ===*/
 
-  
+
 .bio.row {
-   
+
 }
 
     .bio.row img {
         @include span-columns(3);
         @include size(200px);
+    }
+
+    .bio.row p {
+      margin-top: -60px;
+    }
+
+    .bio.row p.subtitle {
+      margin-top: 0;
     }
 
     .bio.row .col-span-9 {
@@ -18,49 +26,49 @@
 
 /* Smallest devices (phone, 768px and below) */
 @media (max-width: 768px) {
-    
+
     .bio.row img {
         @include span-columns(12);
         display:    block;
         @include size(300px);
         margin-bottom:     $defaultMargin/2;
     }
-    
+
     .bio.row .col-span-9 {
         @include span-columns(12);
     }
-    
+
 }
 
-/* Small devices (tablets, 768px to 992px) */ 
+/* Small devices (tablets, 768px to 992px) */
 @media (min-width: 768px) and (max-width: 992px) {
 
     .bio.row img {
         @include span-columns(4);
         @include size(150px);
     }
-    
+
     .bio.row .col-span-9 {
         @include span-columns(8);
     }
- 
+
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1200px) {
-    
+
     .bio.row img {
         @include span-columns(4);
         @include size(200px);
     }
-    
+
     .bio.row .col-span-9 {
         @include span-columns(8);
     }
-    
+
 }
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
-    
+@media (min-width: 1200px) {
+
 }
